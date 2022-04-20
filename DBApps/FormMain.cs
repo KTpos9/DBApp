@@ -24,14 +24,14 @@ namespace DBApps
 
         private Label lblCurrent;
         private Panel leftBorderAccentColor;
+        private Form currentActiveForm;
+
         private Color clickedColor = Color.FromArgb(234, 234, 234);
         private Color nonClickColor = Color.FromArgb(243, 243, 243);
         private Color accentColor = Color.FromArgb(0,120,212);
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            Color color = Color.FromArgb(243, 243, 243);//240,243,249
-            int borderMargin = 20;
-            ControlPaint.DrawBorder(e.Graphics, this.panel2.ClientRectangle, color, borderMargin - 10, ButtonBorderStyle.Solid, color, borderMargin, ButtonBorderStyle.Solid, color, borderMargin, ButtonBorderStyle.Solid, color, borderMargin, ButtonBorderStyle.Solid);
+
         }
 
         private void label_MouseEnter(object sender, EventArgs e)
@@ -58,6 +58,14 @@ namespace DBApps
         private void label_Click(object sender, EventArgs e)
         {
             ChangeColorOnEvent(sender);
+            if((Label)sender == labelSetting)
+            {
+                OpenMenuForm(new Forms.FormSettings());
+            }
+            else if((Label)sender == label5)
+            {
+                OpenMenuForm(new Forms.Form2());
+            }
         }
 
         //change all the label's BackColor to nonClickColor
@@ -95,6 +103,20 @@ namespace DBApps
                 leftBorderAccentColor.Visible = true;
                 leftBorderAccentColor.BringToFront();
             }
+        }
+        private void OpenMenuForm(Form menuForm)
+        {
+            if (currentActiveForm != null)
+            {
+                currentActiveForm.Dispose();
+            }
+            currentActiveForm = menuForm;
+            menuForm.TopLevel = false;
+            menuForm.Dock = DockStyle.Fill;
+            panel2.Controls.Add(menuForm);
+            panel2.Tag = menuForm;
+            menuForm.BringToFront();
+            menuForm.Show();
         }
     }
 }
