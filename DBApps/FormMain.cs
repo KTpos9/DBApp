@@ -104,19 +104,19 @@ namespace DBApps
                 leftBorderAccentColor.BringToFront();
             }
         }
-        private void OpenMenuForm(Form menuForm)
+        private void OpenMenuForm(Form secondaryForm)
         {
             if (currentActiveForm != null)
             {
                 currentActiveForm.Dispose();
             }
-            currentActiveForm = menuForm;
-            menuForm.TopLevel = false;
-            menuForm.Dock = DockStyle.Fill;
-            panel2.Controls.Add(menuForm);
-            panel2.Tag = menuForm;
-            menuForm.BringToFront();
-            menuForm.Show();
+            currentActiveForm = secondaryForm;
+            secondaryForm.TopLevel = false;
+            secondaryForm.Dock = DockStyle.Fill;
+            panel2.Controls.Add(secondaryForm);
+            panel2.Tag = secondaryForm;
+            secondaryForm.BringToFront();
+            secondaryForm.Show();
         }
     }
 }
