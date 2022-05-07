@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DBApps.Forms
+namespace DBApps
 {
-    public partial class Form2 : Form
+    public partial class NavMenuButton : UserControl
     {
-        public Form2()
+        public NavMenuButton()
         {
             InitializeComponent();
         }

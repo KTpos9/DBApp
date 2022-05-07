@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace DBApps
 {
@@ -15,8 +19,6 @@ namespace DBApps
         public FormMain()
         {
             InitializeComponent();
-            //create a new panel use for display accent color when navigation button(label) is selected
-            //delete these 3 lines if use the "Dispose solution code"
             leftBorderAccentColor = new Panel();
             leftBorderAccentColor.Size = new Size(4, 15);
             panelNavigation.Controls.Add(leftBorderAccentColor);
@@ -26,13 +28,9 @@ namespace DBApps
         private Panel leftBorderAccentColor;
         private Form currentActiveForm;
 
-        private Color clickedColor = Color.FromArgb(234, 234, 234);
-        private Color nonClickColor = Color.FromArgb(243, 243, 243);
-        private Color accentColor = Color.FromArgb(0,120,212);
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private System.Drawing.Color clickedColor = System.Drawing.Color.FromArgb(234, 234, 234);
+        private System.Drawing.Color nonClickColor = System.Drawing.Color.FromArgb(243, 243, 243);
+        private System.Drawing.Color accentColor = System.Drawing.Color.FromArgb(0,120,212);
 
         private void label_MouseEnter(object sender, EventArgs e)
         {
@@ -42,7 +40,7 @@ namespace DBApps
             {
                 return;
             }
-            label.BackColor = Color.FromArgb(255, 255, 255);
+            label.BackColor = System.Drawing.Color.FromArgb(255, 255, 255);
         }
 
         private void label_MouseLeave(object sender, EventArgs e)
@@ -57,6 +55,10 @@ namespace DBApps
 
         private void label_Click(object sender, EventArgs e)
         {
+            if((Label)sender == lblCurrent)
+            {
+                return;
+            }
             ChangeColorOnEvent(sender);
             if((Label)sender == labelSetting)
             {
@@ -64,7 +66,7 @@ namespace DBApps
             }
             else if((Label)sender == label5)
             {
-                OpenMenuForm(new Forms.Form2());
+                OpenMenuForm(new Forms.FormS());
             }
         }
 
@@ -75,10 +77,6 @@ namespace DBApps
             {
                 lblCurrent.BackColor = nonClickColor;
                 leftBorderAccentColor.BackColor = nonClickColor;
-                /* "Dispose solution code" (remove the "leftBorderAccentColor.BackColor = nonClickColor;" line first)
-                 * Dispose the panel when new navigation button(label) is selected
-                    leftBorderAccentColor.Dispose();
-                */
             }
         }
 
@@ -91,32 +89,25 @@ namespace DBApps
                 lblCurrent = (Label)sender;
                 lblCurrent.BackColor = clickedColor;
 
-                /* "Dispose solution code" (put these code on top of leftBorderAccentColor.BackColor = accentColor;)
-                 * create a panel by triggering the event then Dispose later when new Navigation button(label) is selected
-                    leftBorderAccentColor = new Panel();
-                    leftBorderAccentColor.Size = new Size(5, 25);
-                    panelNavigation.Controls.Add(leftBorderAccentColor);
-                */
-
                 leftBorderAccentColor.BackColor = accentColor;
                 leftBorderAccentColor.Location = new Point(13, lblCurrent.Location.Y+9);
                 leftBorderAccentColor.Visible = true;
                 leftBorderAccentColor.BringToFront();
             }
         }
-        private void OpenMenuForm(Form secondaryForm)
+        private void OpenMenuForm(Form menuForm)
         {
             if (currentActiveForm != null)
             {
                 currentActiveForm.Dispose();
             }
-            currentActiveForm = secondaryForm;
-            secondaryForm.TopLevel = false;
-            secondaryForm.Dock = DockStyle.Fill;
-            panel2.Controls.Add(secondaryForm);
-            panel2.Tag = secondaryForm;
-            secondaryForm.BringToFront();
-            secondaryForm.Show();
+            currentActiveForm = menuForm;
+            menuForm.TopLevel = false;
+            menuForm.Dock = DockStyle.Fill;
+            panel2.Controls.Add(menuForm);
+            panel2.Tag = menuForm;
+            menuForm.BringToFront();
+            menuForm.Show();
         }
     }
 }

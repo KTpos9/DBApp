@@ -16,5 +16,24 @@ namespace DBApps.Forms
         {
             InitializeComponent();
         }
+        bool resizingTlp;
+
+        private void tableLayoutPanel1_Resize(object sender, EventArgs e)
+        {
+            if (resizingTlp)
+            {
+                return;
+            }
+            resizingTlp = true;
+            if (tableLayoutPanel1.Height <= panel1.ClientSize.Height)
+            {
+                tableLayoutPanel1.Width = panel1.ClientSize.Width;
+            }
+            else
+            {
+                tableLayoutPanel1.Width = panel1.ClientSize.Width - SystemInformation.VerticalScrollBarWidth;
+                resizingTlp = false;
+            }
+        }
     }
 }
