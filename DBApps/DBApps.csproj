@@ -75,6 +75,12 @@
     <Compile Include="Forms\FormSettings.Designer.cs">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ui.Designer.cs">
+      <DependentUpon>ui.cs</DependentUpon>
+    </Compile>
     <Compile Include="NavMenuButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ui.resx">
+      <DependentUpon>ui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavMenuButton.resx">
       <DependentUpon>NavMenuButton.cs</DependentUpon>
