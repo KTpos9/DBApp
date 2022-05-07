@@ -117,6 +117,8 @@ namespace DBApps
             panel2.Tag = secondaryForm;
             secondaryForm.BringToFront();
             secondaryForm.Show();
+
+            //test 1.0
         }
     }
 }
