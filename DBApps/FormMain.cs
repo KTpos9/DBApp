@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+
 
 namespace DBApps
 {
@@ -66,8 +64,9 @@ namespace DBApps
             }
             else if((Label)sender == label5)
             {
-                OpenMenuForm(new Forms.FormS());
+                OpenMenuForm(new Forms.pay());
             }
+
         }
 
         //change all the label's BackColor to nonClickColor
@@ -108,6 +107,8 @@ namespace DBApps
             panel2.Tag = menuForm;
             menuForm.BringToFront();
             menuForm.Show();
+
+            //test
         }
     }
 }
