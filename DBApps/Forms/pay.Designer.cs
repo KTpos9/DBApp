@@ -37,7 +37,9 @@
             // 
             // buttonpay
             // 
-            this.buttonpay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonpay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonpay.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonpay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonpay.Location = new System.Drawing.Point(16, 151);
             this.buttonpay.Name = "buttonpay";
             this.buttonpay.Size = new System.Drawing.Size(235, 52);
@@ -48,10 +50,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 45);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(61, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 41);
+            this.label1.Size = new System.Drawing.Size(150, 50);
             this.label1.TabIndex = 1;
             this.label1.Text = "ยอดชำระ";
             // 
