@@ -16,5 +16,15 @@ namespace DBApps.Forms
         {
             InitializeComponent();
         }
+
+        private void buttonpay_Click(object sender, EventArgs e)
+        {
+
+           
+        }
+
+       
     }
-}
+              
+ }
+        
