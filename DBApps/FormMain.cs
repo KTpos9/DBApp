@@ -64,7 +64,7 @@ namespace DBApps
             }
             else if((Label)sender == label5)
             {
-                OpenMenuForm(new Forms.ui());
+                OpenMenuForm(new Forms.pay());
             }
 
         }

@@ -121,4 +121,10 @@
   <data name="ic_fluent_settings_24_filled__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_fluent_settings_24_filled (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pay (convert.io)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pay (convert.io).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pay (convert1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pay (convert.io).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

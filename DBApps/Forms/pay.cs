@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBApps.Forms
 {
-    public partial class ui : Form
+    public partial class pay : Form
     {
-        public ui()
+        public pay()
         {
             InitializeComponent();
         }

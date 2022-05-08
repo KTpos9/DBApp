@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.panelNavigation = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelSetting = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -73,71 +73,6 @@
             this.panelNavigation.Size = new System.Drawing.Size(215, 561);
             this.panelNavigation.TabIndex = 0;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
-            this.pictureBox6.Location = new System.Drawing.Point(25, 75);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(19);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(25, 120);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(19);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
-            this.pictureBox4.Location = new System.Drawing.Point(25, 165);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(19);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 210);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 255);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 514);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // labelSetting
             // 
             this.labelSetting.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,7 +96,7 @@
             this.label5.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.label5.Size = new System.Drawing.Size(191, 33);
             this.label5.TabIndex = 0;
-            this.label5.Text = "System";
+            this.label5.Text = "ชําระเงิน";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label5.Click += new System.EventHandler(this.label_Click);
             this.label5.MouseEnter += new System.EventHandler(this.label_MouseEnter);
@@ -234,9 +169,74 @@
             this.panel2.Size = new System.Drawing.Size(825, 561);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox6.Location = new System.Drawing.Point(25, 75);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(19);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox5.Location = new System.Drawing.Point(25, 120);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(19);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox4.Location = new System.Drawing.Point(25, 165);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(19);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 210);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DBApps.Properties.Resources.pay__convert1;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 255);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(30);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 514);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(249)))));
