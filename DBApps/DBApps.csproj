@@ -81,6 +81,12 @@
     <Compile Include="Forms\FormSettings.Designer.cs">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\information.Designer.cs">
+      <DependentUpon>information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\pay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\information.resx">
+      <DependentUpon>information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\pay.resx">
       <DependentUpon>pay.cs</DependentUpon>

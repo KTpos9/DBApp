@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelNavigation = new System.Windows.Forms.Panel();
+            this.ovalPictureBox1 = new DBApps.OvalPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -43,11 +44,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelcinema = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelinformation = new System.Windows.Forms.Label();
             this.labelmovie = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ovalPictureBox1 = new DBApps.OvalPictureBox();
             this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -55,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNavigation
@@ -76,7 +76,7 @@
             this.panelNavigation.Controls.Add(this.label5);
             this.panelNavigation.Controls.Add(this.label4);
             this.panelNavigation.Controls.Add(this.labelcinema);
-            this.panelNavigation.Controls.Add(this.label3);
+            this.panelNavigation.Controls.Add(this.labelinformation);
             this.panelNavigation.Controls.Add(this.labelmovie);
             this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavigation.Location = new System.Drawing.Point(0, 0);
@@ -85,13 +85,25 @@
             this.panelNavigation.Size = new System.Drawing.Size(301, 561);
             this.panelNavigation.TabIndex = 0;
             // 
+            // ovalPictureBox1
+            // 
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.ovalPictureBox1.Image = global::DBApps.Properties.Resources.ic_fluent_person_24_regular;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(21, 34);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.ovalPictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ovalPictureBox1.TabIndex = 7;
+            this.ovalPictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(79, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.Size = new System.Drawing.Size(134, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Name Lastname";
             // 
@@ -101,7 +113,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label1.Location = new System.Drawing.Point(77, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 28);
+            this.label1.Size = new System.Drawing.Size(103, 35);
             this.label1.TabIndex = 5;
             this.label1.Text = "EMP001";
             // 
@@ -252,19 +264,19 @@
             this.labelcinema.MouseEnter += new System.EventHandler(this.label_MouseEnter);
             this.labelcinema.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
-            // label3
+            // labelinformation
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 244);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(263, 33);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "สืบค้นข้อมูล";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Click += new System.EventHandler(this.label_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.label_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.labelinformation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelinformation.Location = new System.Drawing.Point(17, 244);
+            this.labelinformation.Name = "labelinformation";
+            this.labelinformation.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.labelinformation.Size = new System.Drawing.Size(263, 33);
+            this.labelinformation.TabIndex = 0;
+            this.labelinformation.Text = "สืบค้นข้อมูล";
+            this.labelinformation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelinformation.Click += new System.EventHandler(this.label_Click);
+            this.labelinformation.MouseEnter += new System.EventHandler(this.label_MouseEnter);
+            this.labelinformation.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
             // labelmovie
             // 
@@ -291,21 +303,9 @@
             this.panel2.Size = new System.Drawing.Size(846, 561);
             this.panel2.TabIndex = 1;
             // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ovalPictureBox1.Image = global::DBApps.Properties.Resources.ic_fluent_person_24_regular;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(21, 34);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.ovalPictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ovalPictureBox1.TabIndex = 7;
-            this.ovalPictureBox1.TabStop = false;
-            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(249)))));
@@ -318,6 +318,7 @@
             this.Text = "db";
             this.panelNavigation.ResumeLayout(false);
             this.panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -325,7 +326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,7 +339,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelcinema;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelinformation;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
