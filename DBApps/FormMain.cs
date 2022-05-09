@@ -112,9 +112,6 @@ namespace DBApps
             panel2.Tag = menuForm;
             menuForm.BringToFront();
             menuForm.Show();
-
-            
-
         }
     }
 }
