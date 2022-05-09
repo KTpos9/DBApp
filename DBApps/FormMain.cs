@@ -20,6 +20,7 @@ namespace DBApps
             leftBorderAccentColor = new Panel();
             leftBorderAccentColor.Size = new Size(4, 15);
             panelNavigation.Controls.Add(leftBorderAccentColor);
+            //testtt
         }
 
         private Label lblCurrent;
