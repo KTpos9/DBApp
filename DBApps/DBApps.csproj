@@ -99,6 +99,9 @@
     <Compile Include="NavMenuButton.Designer.cs">
       <DependentUpon>NavMenuButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormLogin.resx">
@@ -175,6 +178,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\101 pro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_fluent_chevron_right_24_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_fluent_document_24_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_fluent_search_24_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_fluent_expand_up_right_24_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_fluent_person_24_regular.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

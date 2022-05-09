@@ -93,7 +93,7 @@ namespace DBApps
                 lblCurrent.BackColor = clickedColor;
 
                 leftBorderAccentColor.BackColor = accentColor;
-                leftBorderAccentColor.Location = new Point(13, lblCurrent.Location.Y+9);
+                leftBorderAccentColor.Location = new Point(18, lblCurrent.Location.Y+9);
                 leftBorderAccentColor.Visible = true;
                 leftBorderAccentColor.BringToFront();
             }
