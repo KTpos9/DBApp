@@ -71,7 +71,10 @@ namespace DBApps
             {
                 OpenMenuForm(new Forms.Home());
             }
-
+            else if ((Label)sender == labelinformation)
+            {
+                OpenMenuForm(new Forms.information());
+            }
         }
 
         //change all the label's BackColor to nonClickColor
