@@ -42,9 +42,9 @@
             this.buttonpay.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonpay.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonpay.ForeColor = System.Drawing.Color.DarkRed;
-            this.buttonpay.Location = new System.Drawing.Point(16, 126);
+            this.buttonpay.Location = new System.Drawing.Point(22, 116);
             this.buttonpay.Name = "buttonpay";
-            this.buttonpay.Size = new System.Drawing.Size(235, 52);
+            this.buttonpay.Size = new System.Drawing.Size(215, 34);
             this.buttonpay.TabIndex = 0;
             this.buttonpay.Text = "ชําระเงิน";
             this.buttonpay.UseVisualStyleBackColor = false;
@@ -53,6 +53,9 @@
             // 
             // labeltext1
             // 
+            this.labeltext1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labeltext1.AutoSize = true;
             this.labeltext1.BackColor = System.Drawing.Color.Transparent;
             this.labeltext1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,22 +71,22 @@
             // 
             this.textpay.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textpay.Enabled = false;
-            this.textpay.Location = new System.Drawing.Point(16, 69);
+            this.textpay.Location = new System.Drawing.Point(22, 69);
             this.textpay.Multiline = true;
             this.textpay.Name = "textpay";
             this.textpay.ReadOnly = true;
-            this.textpay.Size = new System.Drawing.Size(235, 51);
+            this.textpay.Size = new System.Drawing.Size(215, 41);
             this.textpay.TabIndex = 2;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.groupBox1.Controls.Add(this.labeltext1);
             this.groupBox1.Controls.Add(this.buttonpay);
             this.groupBox1.Controls.Add(this.textpay);
             this.groupBox1.Location = new System.Drawing.Point(553, -5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(266, 199);
+            this.groupBox1.Size = new System.Drawing.Size(256, 162);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -99,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.ClientSize = new System.Drawing.Size(846, 551);
             this.Controls.Add(this.webmovie);
             this.Controls.Add(this.groupBox1);
