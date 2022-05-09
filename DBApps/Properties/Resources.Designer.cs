@@ -73,6 +73,36 @@ namespace DBApps.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_movie_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-movie-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_movie_90 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-movie-90", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movie__convert_io_ {
+            get {
+                object obj = ResourceManager.GetObject("movie (convert.io)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pay__convert_io_ {
             get {
                 object obj = ResourceManager.GetObject("pay (convert.io)", resourceCulture);
@@ -86,6 +116,26 @@ namespace DBApps.Properties {
         internal static System.Drawing.Bitmap pay__convert1 {
             get {
                 object obj = ResourceManager.GetObject("pay (convert1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap popcorn__convert_io_ {
+            get {
+                object obj = ResourceManager.GetObject("popcorn (convert.io)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ui_home__convert_io_ {
+            get {
+                object obj = ResourceManager.GetObject("ui-home (convert.io)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

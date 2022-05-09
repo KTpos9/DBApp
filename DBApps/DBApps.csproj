@@ -63,6 +63,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\pay.resx">
       <DependentUpon>pay.cs</DependentUpon>
@@ -139,6 +148,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pay %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movie-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movie-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popcorn %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui-home %28convert.io%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

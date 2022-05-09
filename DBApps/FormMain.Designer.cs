@@ -32,10 +32,12 @@
             this.labelSetting = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelcinema = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelmovie = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelhome = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -43,6 +45,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -54,6 +57,8 @@
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panelNavigation.Controls.Add(this.pictureBox7);
+            this.panelNavigation.Controls.Add(this.labelhome);
             this.panelNavigation.Controls.Add(this.pictureBox6);
             this.panelNavigation.Controls.Add(this.pictureBox5);
             this.panelNavigation.Controls.Add(this.pictureBox4);
@@ -63,9 +68,9 @@
             this.panelNavigation.Controls.Add(this.labelSetting);
             this.panelNavigation.Controls.Add(this.label5);
             this.panelNavigation.Controls.Add(this.label4);
-            this.panelNavigation.Controls.Add(this.label2);
+            this.panelNavigation.Controls.Add(this.labelcinema);
             this.panelNavigation.Controls.Add(this.label3);
-            this.panelNavigation.Controls.Add(this.label1);
+            this.panelNavigation.Controls.Add(this.labelmovie);
             this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavigation.Location = new System.Drawing.Point(0, 0);
             this.panelNavigation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -116,19 +121,19 @@
             this.label4.MouseEnter += new System.EventHandler(this.label_MouseEnter);
             this.label4.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
-            // label2
+            // labelcinema
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 113);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(191, 33);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "System";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.label_Click);
-            this.label2.MouseEnter += new System.EventHandler(this.label_MouseEnter);
-            this.label2.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.labelcinema.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcinema.Location = new System.Drawing.Point(12, 113);
+            this.labelcinema.Name = "labelcinema";
+            this.labelcinema.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.labelcinema.Size = new System.Drawing.Size(191, 33);
+            this.labelcinema.TabIndex = 0;
+            this.labelcinema.Text = "โรงภาพยนตร์";
+            this.labelcinema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelcinema.Click += new System.EventHandler(this.label_Click);
+            this.labelcinema.MouseEnter += new System.EventHandler(this.label_MouseEnter);
+            this.labelcinema.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
             // label3
             // 
@@ -144,19 +149,19 @@
             this.label3.MouseEnter += new System.EventHandler(this.label_MouseEnter);
             this.label3.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
-            // label1
+            // labelmovie
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 68);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(191, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "System";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label_Click);
-            this.label1.MouseEnter += new System.EventHandler(this.label_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.labelmovie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelmovie.Location = new System.Drawing.Point(12, 68);
+            this.labelmovie.Name = "labelmovie";
+            this.labelmovie.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.labelmovie.Size = new System.Drawing.Size(191, 33);
+            this.labelmovie.TabIndex = 0;
+            this.labelmovie.Text = "ภาพยนตร์";
+            this.labelmovie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelmovie.Click += new System.EventHandler(this.label_Click);
+            this.labelmovie.MouseEnter += new System.EventHandler(this.label_MouseEnter);
+            this.labelmovie.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
             // panel2
             // 
@@ -169,9 +174,34 @@
             this.panel2.Size = new System.Drawing.Size(825, 561);
             this.panel2.TabIndex = 1;
             // 
+            // labelhome
+            // 
+            this.labelhome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelhome.Location = new System.Drawing.Point(12, 23);
+            this.labelhome.Name = "labelhome";
+            this.labelhome.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.labelhome.Size = new System.Drawing.Size(191, 33);
+            this.labelhome.TabIndex = 2;
+            this.labelhome.Text = "Home";
+            this.labelhome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelhome.Click += new System.EventHandler(this.label_Click);
+            this.labelhome.MouseEnter += new System.EventHandler(this.label_MouseEnter);
+            this.labelhome.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::DBApps.Properties.Resources.ui_home__convert_io_;
+            this.pictureBox7.Location = new System.Drawing.Point(25, 30);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(19);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 3;
+            this.pictureBox7.TabStop = false;
+            // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox6.Image = global::DBApps.Properties.Resources.icons8_movie_100;
             this.pictureBox6.Location = new System.Drawing.Point(25, 75);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(19);
             this.pictureBox6.Name = "pictureBox6";
@@ -182,7 +212,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox5.Image = global::DBApps.Properties.Resources.popcorn__convert_io_;
             this.pictureBox5.Location = new System.Drawing.Point(25, 120);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(19);
             this.pictureBox5.Name = "pictureBox5";
@@ -248,6 +278,7 @@
             this.Name = "FormMain";
             this.Text = "db";
             this.panelNavigation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -262,11 +293,11 @@
 
         private System.Windows.Forms.Panel panelNavigation;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelmovie;
         private System.Windows.Forms.Label labelSetting;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelcinema;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -274,6 +305,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label labelhome;
     }
 }
 

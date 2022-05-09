@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pay (convert.io)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pay (convert.io).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-movie-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-movie-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pay (convert1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pay (convert.io).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_fluent_settings_24_filled__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_fluent_settings_24_filled (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="movie (convert.io)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\movie (convert.io).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="popcorn (convert.io)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\popcorn (convert.io).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-movie-90" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-movie-90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ui-home (convert.io)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ui-home (convert.io).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

@@ -16,14 +16,20 @@ namespace DBApps.Forms
         {
             InitializeComponent();
         }
-
+        private System.Drawing.Color clickedColor = System.Drawing.Color.FromArgb(234, 234, 234);
+        private System.Drawing.Color nonClickColor = System.Drawing.Color.FromArgb(243, 243, 243);
+        private System.Drawing.Color accentColor = System.Drawing.Color.FromArgb(0, 120, 212);
+       
         private void buttonpay_Click(object sender, EventArgs e)
         {
 
            
         }
 
-       
+        private void buttonpay_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
     }
               
  }
