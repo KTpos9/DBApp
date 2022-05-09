@@ -89,7 +89,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 61);
+            this.label2.Location = new System.Drawing.Point(79, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 17);
             this.label2.TabIndex = 6;
@@ -99,7 +99,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label1.Location = new System.Drawing.Point(71, 29);
+            this.label1.Location = new System.Drawing.Point(77, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 28);
             this.label1.TabIndex = 5;
@@ -154,7 +154,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox4.Image = global::DBApps.Properties.Resources.ic_fluent_search_24_filled;
             this.pictureBox4.Location = new System.Drawing.Point(30, 251);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(19);
             this.pictureBox4.Name = "pictureBox4";
@@ -165,7 +165,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::DBApps.Properties.Resources.ic_fluent_settings_24_filled__2_;
+            this.pictureBox3.Image = global::DBApps.Properties.Resources.ic_fluent_document_24_filled;
             this.pictureBox3.Location = new System.Drawing.Point(30, 296);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(22);
             this.pictureBox3.Name = "pictureBox3";
@@ -232,7 +232,7 @@
             this.label4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.label4.Size = new System.Drawing.Size(263, 33);
             this.label4.TabIndex = 0;
-            this.label4.Text = "System";
+            this.label4.Text = "รายงาน";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label4.Click += new System.EventHandler(this.label_Click);
             this.label4.MouseEnter += new System.EventHandler(this.label_MouseEnter);
@@ -260,7 +260,7 @@
             this.label3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.label3.Size = new System.Drawing.Size(263, 33);
             this.label3.TabIndex = 0;
-            this.label3.Text = "System";
+            this.label3.Text = "สืบค้นข้อมูล";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Click += new System.EventHandler(this.label_Click);
             this.label3.MouseEnter += new System.EventHandler(this.label_MouseEnter);
@@ -295,7 +295,7 @@
             // 
             this.ovalPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ovalPictureBox1.Image = global::DBApps.Properties.Resources.ic_fluent_person_24_regular;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(15, 30);
+            this.ovalPictureBox1.Location = new System.Drawing.Point(21, 34);
             this.ovalPictureBox1.Name = "ovalPictureBox1";
             this.ovalPictureBox1.Padding = new System.Windows.Forms.Padding(5);
             this.ovalPictureBox1.Size = new System.Drawing.Size(50, 50);
