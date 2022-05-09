@@ -63,6 +63,16 @@ namespace DBApps.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _101_pro {
+            get {
+                object obj = ResourceManager.GetObject("101 pro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_fluent_settings_24_filled__2_ {
             get {
                 object obj = ResourceManager.GetObject("ic_fluent_settings_24_filled__2_", resourceCulture);

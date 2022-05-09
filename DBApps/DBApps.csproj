@@ -87,6 +87,12 @@
     <Compile Include="Forms\pay.Designer.cs">
       <DependentUpon>pay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\User\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="NavMenuButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\pay.resx">
       <DependentUpon>pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavMenuButton.resx">
       <DependentUpon>NavMenuButton.cs</DependentUpon>
@@ -163,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ui-home %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101 pro.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

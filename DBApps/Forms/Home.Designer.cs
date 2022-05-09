@@ -30,6 +30,8 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControl11 = new DBApps.Forms.User.UserControl1();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -45,10 +47,19 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.userControl11);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(22, 67);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(783, 416);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(4, 5);
+            this.userControl11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1404, 194);
+            this.userControl11.TabIndex = 0;
             // 
             // Home
             // 
@@ -63,6 +74,7 @@
             this.Name = "Home";
             this.Text = "Form1";
             this.UseWaitCursor = true;
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,5 +84,6 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private User.UserControl1 userControl11;
     }
 }
