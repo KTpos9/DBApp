@@ -48,24 +48,25 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.userControl11);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(22, 67);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-1, 67);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(783, 416);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(846, 487);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.UseWaitCursor = true;
             // 
             // userControl11
             // 
             this.userControl11.Location = new System.Drawing.Point(4, 5);
             this.userControl11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1404, 194);
+            this.userControl11.Size = new System.Drawing.Size(846, 168);
             this.userControl11.TabIndex = 0;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 504);
+            this.ClientSize = new System.Drawing.Size(846, 551);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
