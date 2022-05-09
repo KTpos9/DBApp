@@ -66,6 +66,10 @@ namespace DBApps
             {
                 OpenMenuForm(new Forms.pay());
             }
+            else if ((Label)sender == labelhome)
+            {
+                OpenMenuForm(new Forms.Home());
+            }
 
         }
 

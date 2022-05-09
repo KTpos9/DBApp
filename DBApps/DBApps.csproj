@@ -63,6 +63,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="Forms\pay.Designer.cs">
       <DependentUpon>pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="NavMenuButton.cs">
       <SubType>UserControl</SubType>
@@ -101,8 +113,14 @@
     <EmbeddedResource Include="Forms\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\pay.resx">
       <DependentUpon>pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavMenuButton.resx">
       <DependentUpon>NavMenuButton.cs</DependentUpon>
@@ -139,6 +157,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pay %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movie-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movie-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popcorn %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui-home %28convert.io%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101 pro.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
