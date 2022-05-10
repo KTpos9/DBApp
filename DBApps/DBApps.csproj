@@ -51,6 +51,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAppDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +98,12 @@
     <Compile Include="Forms\pay.Designer.cs">
       <DependentUpon>pay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\sqlinformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\sqlinformation.Designer.cs">
+      <DependentUpon>sqlinformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\User\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +142,9 @@
     <EmbeddedResource Include="Forms\pay.resx">
       <DependentUpon>pay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\sqlinformation.resx">
+      <DependentUpon>sqlinformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\User\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +161,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataAppDataSet.xsc">
+      <DependentUpon>DataAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataAppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataAppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataAppDataSet.xss">
+      <DependentUpon>DataAppDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -202,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_fluent_person_24_regular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

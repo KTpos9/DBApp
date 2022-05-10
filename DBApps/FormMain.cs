@@ -75,6 +75,10 @@ namespace DBApps
             {
                 OpenMenuForm(new Forms.information());
             }
+            else if ((Label)sender == labeltest)
+            {
+               OpenMenuForm(new Forms.sqlinformation());
+            }
         }
 
         //change all the label's BackColor to nonClickColor

@@ -22,6 +22,16 @@ namespace DBApps.Forms
         private void button1_Click(object sender, EventArgs e)
         {
            
+           // OpenMenuForm(new Forms.information());
+        
+        
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+              
+            
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelNavigation = new System.Windows.Forms.Panel();
-            this.ovalPictureBox1 = new DBApps.OvalPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -47,8 +46,9 @@
             this.labelinformation = new System.Windows.Forms.Label();
             this.labelmovie = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labeltest = new System.Windows.Forms.Label();
+            this.ovalPictureBox1 = new DBApps.OvalPictureBox();
             this.panelNavigation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -56,11 +56,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panelNavigation.Controls.Add(this.labeltest);
             this.panelNavigation.Controls.Add(this.ovalPictureBox1);
             this.panelNavigation.Controls.Add(this.label2);
             this.panelNavigation.Controls.Add(this.label1);
@@ -84,18 +86,6 @@
             this.panelNavigation.Name = "panelNavigation";
             this.panelNavigation.Size = new System.Drawing.Size(301, 561);
             this.panelNavigation.TabIndex = 0;
-            // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ovalPictureBox1.Image = global::DBApps.Properties.Resources.ic_fluent_person_24_regular;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(21, 34);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.ovalPictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ovalPictureBox1.TabIndex = 7;
-            this.ovalPictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -303,6 +293,32 @@
             this.panel2.Size = new System.Drawing.Size(846, 561);
             this.panel2.TabIndex = 1;
             // 
+            // labeltest
+            // 
+            this.labeltest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltest.Location = new System.Drawing.Point(17, 377);
+            this.labeltest.Name = "labeltest";
+            this.labeltest.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.labeltest.Size = new System.Drawing.Size(263, 33);
+            this.labeltest.TabIndex = 8;
+            this.labeltest.Text = "tset";
+            this.labeltest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labeltest.Click += new System.EventHandler(this.label_Click);
+            this.labeltest.MouseEnter += new System.EventHandler(this.label_MouseEnter);
+            this.labeltest.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            // 
+            // ovalPictureBox1
+            // 
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.ovalPictureBox1.Image = global::DBApps.Properties.Resources.ic_fluent_person_24_regular;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(21, 34);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.ovalPictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ovalPictureBox1.TabIndex = 7;
+            this.ovalPictureBox1.TabStop = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
@@ -318,7 +334,6 @@
             this.Text = "db";
             this.panelNavigation.ResumeLayout(false);
             this.panelNavigation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -326,6 +341,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,6 +367,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private OvalPictureBox ovalPictureBox1;
+        private System.Windows.Forms.Label labeltest;
     }
 }
 
