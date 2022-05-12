@@ -15,13 +15,23 @@ namespace DBApps.Forms
         public information()
         {
             InitializeComponent();
-           
-
         }
        
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form form = new FormEmpQuery();
+            form.Show();
+        }
+
+        private void buttonMovie_Click(object sender, EventArgs e)
+        {
+            Form form = new QueryForm.FormMovieQuery();
+            form.Show();
         }
     }
 }
