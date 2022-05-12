@@ -103,7 +103,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(79, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 23);
+            this.label2.Size = new System.Drawing.Size(102, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Name Lastname";
             // 
@@ -113,7 +113,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.label1.Location = new System.Drawing.Point(77, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 35);
+            this.label1.Size = new System.Drawing.Size(84, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "EMP001";
             // 
@@ -214,7 +214,7 @@
             this.labelSetting.Location = new System.Drawing.Point(17, 507);
             this.labelSetting.Name = "labelSetting";
             this.labelSetting.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.labelSetting.Size = new System.Drawing.Size(191, 33);
+            this.labelSetting.Size = new System.Drawing.Size(263, 33);
             this.labelSetting.TabIndex = 0;
             this.labelSetting.Text = "Settings";
             this.labelSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,7 +305,7 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(249)))));

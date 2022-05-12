@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MovieDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="BookingID" />
+          </Key>
+          <Property Name="BookingID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CusID" Type="nvarchar" MaxLength="255" />
+          <Property Name="MSID" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingNum" Type="nvarchar" MaxLength="255" />
+          <Property Name="MovieName" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingCinemaNo" Type="int" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CusID" />
+          </Key>
+          <Property Name="CusID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CusName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CusEmail" Type="nvarchar" MaxLength="255" />
+          <Property Name="CusPhone" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmpID" />
+          </Key>
+          <Property Name="EmpID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="EmpPassword" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpSalary" Type="int" />
+          <Property Name="EmpPositionID" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpPosition" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpFname" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpSname" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpHouseNum" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpMoo" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpSubDistrict" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpDistrict" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpProvince" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmpPostalCode" Type="int" />
+          <Property Name="MovieID" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Movie">
+          <Key>
+            <PropertyRef Name="MovieID" />
+          </Key>
+          <Property Name="MovieID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="MoviePrice" Type="int" />
+          <Property Name="MovieName" Type="nvarchar" MaxLength="255" />
+          <Property Name="MovieCategory" Type="nvarchar" MaxLength="255" />
+          <Property Name="MovieDate" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="MovieSchedule">
+          <Key>
+            <PropertyRef Name="MSID" />
+          </Key>
+          <Property Name="MSID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="MSTime" Type="nvarchar" MaxLength="255" />
+          <Property Name="MSDate" Type="nvarchar" MaxLength="255" />
+          <Property Name="MSAdd" Type="int" />
+          <Property Name="MovieID" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Payments">
+          <Key>
+            <PropertyRef Name="PayID" />
+          </Key>
+          <Property Name="PayID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="RevenueID" Type="nvarchar" MaxLength="255" />
+          <Property Name="PayDate" Type="datetime" />
+          <Property Name="PayAmount" Type="int" />
+          <Property Name="PayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayCVC" Type="int" />
+          <Property Name="PayExpDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Revenue">
+          <Key>
+            <PropertyRef Name="RevenueID" />
+          </Key>
+          <Property Name="RevenueID" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="RevenueDate" Type="datetime2" Precision="0" />
+          <Property Name="RevenueUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="RevenueType" Type="nvarchar" MaxLength="255" />
+          <Property Name="RevenuePrice" Type="int" />
+          <Property Name="MovieID" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="Booking$CustomerBooking">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CusID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="CusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Booking$Movie scheduleBooking">
+          <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="0..1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MovieSchedule">
+              <PropertyRef Name="MSID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="MSID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Employee$MovieEmployee">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="MovieID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MovieSchedule$MovieMovie schedule">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="0..1" />
+          <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="MovieID" />
+            </Principal>
+            <Dependent Role="MovieSchedule">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Revenue$MovieRevenue">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="0..1" />
+          <End Role="Revenue" Type="Self.Revenue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="MovieID" />
+            </Principal>
+            <Dependent Role="Revenue">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MovieDBModelStoreContainer">
+          <EntitySet Name="Booking" EntityType="Self.Booking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Movie" EntityType="Self.Movie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MovieSchedule" EntityType="Self.MovieSchedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Revenue" EntityType="Self.Revenue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Booking$CustomerBooking" Association="Self.Booking$CustomerBooking">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="Booking$Movie scheduleBooking" Association="Self.Booking$Movie scheduleBooking">
+            <End Role="MovieSchedule" EntitySet="MovieSchedule" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="Employee$MovieEmployee" Association="Self.Employee$MovieEmployee">
+            <End Role="Movie" EntitySet="Movie" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="MovieSchedule$MovieMovie schedule" Association="Self.MovieSchedule$MovieMovie schedule">
+            <End Role="Movie" EntitySet="Movie" />
+            <End Role="MovieSchedule" EntitySet="MovieSchedule" />
+          </AssociationSet>
+          <AssociationSet Name="Revenue$MovieRevenue" Association="Self.Revenue$MovieRevenue">
+            <End Role="Movie" EntitySet="Movie" />
+            <End Role="Revenue" EntitySet="Revenue" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MovieDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="BookingID" />
+          </Key>
+          <Property Name="BookingID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CusID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MSID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BookingNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MovieName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BookingCinemaNo" Type="Int32" />
+          <NavigationProperty Name="Customer" Relationship="Self.Booking_CustomerBooking" FromRole="Booking" ToRole="Customer" />
+          <NavigationProperty Name="MovieSchedule" Relationship="Self.Booking_Movie_scheduleBooking" FromRole="Booking" ToRole="MovieSchedule" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CusID" />
+          </Key>
+          <Property Name="CusID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CusName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CusEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CusPhone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bookings" Relationship="Self.Booking_CustomerBooking" FromRole="Customer" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmpID" />
+          </Key>
+          <Property Name="EmpID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmpPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpSalary" Type="Int32" />
+          <Property Name="EmpPositionID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpPosition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpFname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpSname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpHouseNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpMoo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpSubDistrict" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpDistrict" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpProvince" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmpPostalCode" Type="Int32" />
+          <Property Name="MovieID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Movie" Relationship="Self.Employee_MovieEmployee" FromRole="Employee" ToRole="Movie" />
+        </EntityType>
+        <EntityType Name="Movie">
+          <Key>
+            <PropertyRef Name="MovieID" />
+          </Key>
+          <Property Name="MovieID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoviePrice" Type="Int32" />
+          <Property Name="MovieName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MovieCategory" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MovieDate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employees" Relationship="Self.Employee_MovieEmployee" FromRole="Movie" ToRole="Employee" />
+          <NavigationProperty Name="MovieSchedules" Relationship="Self.MovieSchedule_MovieMovie_schedule" FromRole="Movie" ToRole="MovieSchedule" />
+          <NavigationProperty Name="Revenues" Relationship="Self.Revenue_MovieRevenue" FromRole="Movie" ToRole="Revenue" />
+        </EntityType>
+        <EntityType Name="MovieSchedule">
+          <Key>
+            <PropertyRef Name="MSID" />
+          </Key>
+          <Property Name="MSID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MSTime" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MSDate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MSAdd" Type="Int32" />
+          <Property Name="MovieID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bookings" Relationship="Self.Booking_Movie_scheduleBooking" FromRole="MovieSchedule" ToRole="Booking" />
+          <NavigationProperty Name="Movie" Relationship="Self.MovieSchedule_MovieMovie_schedule" FromRole="MovieSchedule" ToRole="Movie" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="PayID" />
+          </Key>
+          <Property Name="PayID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="RevenueID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PayDate" Type="DateTime" Precision="3" />
+          <Property Name="PayAmount" Type="Int32" />
+          <Property Name="PayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayCVC" Type="Int32" />
+          <Property Name="PayExpDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Revenue">
+          <Key>
+            <PropertyRef Name="RevenueID" />
+          </Key>
+          <Property Name="RevenueID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RevenueDate" Type="DateTime" Precision="0" />
+          <Property Name="RevenueUser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RevenueType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RevenuePrice" Type="Int32" />
+          <Property Name="MovieID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Movie" Relationship="Self.Revenue_MovieRevenue" FromRole="Revenue" ToRole="Movie" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="Booking_CustomerBooking">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CusID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="CusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Booking_Movie_scheduleBooking">
+          <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="0..1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MovieSchedule">
+              <PropertyRef Name="MSID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="MSID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Employee_MovieEmployee">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="MovieID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MovieSchedule_MovieMovie_schedule">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="0..1" />
+          <End Role="MovieSchedule" Type="Self.MovieSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="MovieID" />
+            </Principal>
+            <Dependent Role="MovieSchedule">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Revenue_MovieRevenue">
+          <End Role="Movie" Type="Self.Movie" Multiplicity="0..1" />
+          <End Role="Revenue" Type="Self.Revenue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Movie">
+              <PropertyRef Name="MovieID" />
+            </Principal>
+            <Dependent Role="Revenue">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MovieDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bookings" EntityType="Self.Booking" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Movies" EntityType="Self.Movie" />
+          <EntitySet Name="MovieSchedules" EntityType="Self.MovieSchedule" />
+          <EntitySet Name="Payments" EntityType="Self.Payment" />
+          <EntitySet Name="Revenues" EntityType="Self.Revenue" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="Booking_CustomerBooking" Association="Self.Booking_CustomerBooking">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="Booking_Movie_scheduleBooking" Association="Self.Booking_Movie_scheduleBooking">
+            <End Role="MovieSchedule" EntitySet="MovieSchedules" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="Employee_MovieEmployee" Association="Self.Employee_MovieEmployee">
+            <End Role="Movie" EntitySet="Movies" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="MovieSchedule_MovieMovie_schedule" Association="Self.MovieSchedule_MovieMovie_schedule">
+            <End Role="Movie" EntitySet="Movies" />
+            <End Role="MovieSchedule" EntitySet="MovieSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="Revenue_MovieRevenue" Association="Self.Revenue_MovieRevenue">
+            <End Role="Movie" EntitySet="Movies" />
+            <End Role="Revenue" EntitySet="Revenues" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MovieDBModelStoreContainer" CdmEntityContainer="MovieDBEntities">
+          <EntitySetMapping Name="Bookings">
+            <EntityTypeMapping TypeName="MovieDBModel.Booking">
+              <MappingFragment StoreEntitySet="Booking">
+                <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+                <ScalarProperty Name="CusID" ColumnName="CusID" />
+                <ScalarProperty Name="MSID" ColumnName="MSID" />
+                <ScalarProperty Name="BookingNum" ColumnName="BookingNum" />
+                <ScalarProperty Name="MovieName" ColumnName="MovieName" />
+                <ScalarProperty Name="BookingCinemaNo" ColumnName="BookingCinemaNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="MovieDBModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="CusID" ColumnName="CusID" />
+                <ScalarProperty Name="CusName" ColumnName="CusName" />
+                <ScalarProperty Name="CusEmail" ColumnName="CusEmail" />
+                <ScalarProperty Name="CusPhone" ColumnName="CusPhone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="MovieDBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="EmpPassword" ColumnName="EmpPassword" />
+                <ScalarProperty Name="EmpSalary" ColumnName="EmpSalary" />
+                <ScalarProperty Name="EmpPositionID" ColumnName="EmpPositionID" />
+                <ScalarProperty Name="EmpPosition" ColumnName="EmpPosition" />
+                <ScalarProperty Name="EmpFname" ColumnName="EmpFname" />
+                <ScalarProperty Name="EmpSname" ColumnName="EmpSname" />
+                <ScalarProperty Name="EmpHouseNum" ColumnName="EmpHouseNum" />
+                <ScalarProperty Name="EmpMoo" ColumnName="EmpMoo" />
+                <ScalarProperty Name="EmpSubDistrict" ColumnName="EmpSubDistrict" />
+                <ScalarProperty Name="EmpDistrict" ColumnName="EmpDistrict" />
+                <ScalarProperty Name="EmpProvince" ColumnName="EmpProvince" />
+                <ScalarProperty Name="EmpPostalCode" ColumnName="EmpPostalCode" />
+                <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Movies">
+            <EntityTypeMapping TypeName="MovieDBModel.Movie">
+              <MappingFragment StoreEntitySet="Movie">
+                <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+                <ScalarProperty Name="MoviePrice" ColumnName="MoviePrice" />
+                <ScalarProperty Name="MovieName" ColumnName="MovieName" />
+                <ScalarProperty Name="MovieCategory" ColumnName="MovieCategory" />
+                <ScalarProperty Name="MovieDate" ColumnName="MovieDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MovieSchedules">
+            <EntityTypeMapping TypeName="MovieDBModel.MovieSchedule">
+              <MappingFragment StoreEntitySet="MovieSchedule">
+                <ScalarProperty Name="MSID" ColumnName="MSID" />
+                <ScalarProperty Name="MSTime" ColumnName="MSTime" />
+                <ScalarProperty Name="MSDate" ColumnName="MSDate" />
+                <ScalarProperty Name="MSAdd" ColumnName="MSAdd" />
+                <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="MovieDBModel.Payment">
+              <MappingFragment StoreEntitySet="Payments">
+                <ScalarProperty Name="PayID" ColumnName="PayID" />
+                <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+                <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+                <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+                <ScalarProperty Name="PayName" ColumnName="PayName" />
+                <ScalarProperty Name="PayCVC" ColumnName="PayCVC" />
+                <ScalarProperty Name="PayExpDate" ColumnName="PayExpDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Revenues">
+            <EntityTypeMapping TypeName="MovieDBModel.Revenue">
+              <MappingFragment StoreEntitySet="Revenue">
+                <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+                <ScalarProperty Name="RevenueDate" ColumnName="RevenueDate" />
+                <ScalarProperty Name="RevenueUser" ColumnName="RevenueUser" />
+                <ScalarProperty Name="RevenueType" ColumnName="RevenueType" />
+                <ScalarProperty Name="RevenuePrice" ColumnName="RevenuePrice" />
+                <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MovieDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

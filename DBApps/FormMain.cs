@@ -107,6 +107,7 @@ namespace DBApps
             if (currentActiveForm != null)
             {
                 currentActiveForm.Dispose();
+                GC.Collect();
             }
             currentActiveForm = menuForm;
             menuForm.TopLevel = false;

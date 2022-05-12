@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5102a78d7c12468e8611c32c19898eae" Name="Diagram1">
+        <EntityTypeShape EntityType="MovieDBModel.Booking" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Customer" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Employee" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Movie" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.MovieSchedule" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Payment" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Revenue" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="MovieDBModel.Booking_CustomerBooking" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.Booking_Movie_scheduleBooking" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.Employee_MovieEmployee" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.MovieSchedule_MovieMovie_schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.Revenue_MovieRevenue" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
