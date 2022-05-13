@@ -106,7 +106,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(766, 67);
             this.button4.TabIndex = 0;
-            this.button4.Text = " ข้อมูลพนักงาน";
+            this.button4.Text = " ข้อมูลการจอง";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);

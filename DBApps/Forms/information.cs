@@ -37,7 +37,8 @@ namespace DBApps.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form form = new QueryForm.FormBooking();
+            form.Show();
 
         }
     }

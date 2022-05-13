@@ -113,6 +113,12 @@
     <Compile Include="Payment.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="QueryForm\FormBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryForm\FormBooking.Designer.cs">
+      <DependentUpon>FormBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="QueryForm\FormEmpQuery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryForm\FormBooking.resx">
+      <DependentUpon>FormBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QueryForm\FormEmpQuery.resx">
       <DependentUpon>FormEmpQuery.cs</DependentUpon>
