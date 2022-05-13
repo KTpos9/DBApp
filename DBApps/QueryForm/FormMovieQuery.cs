@@ -21,8 +21,11 @@ namespace DBApps.QueryForm
 
         private async void FormMovieQuery_Load(object sender, EventArgs e)
         {
-            await moviedb.Movies.LoadAsync();
-            movieBindingSource.DataSource = moviedb.Movies.Local;
+            // TODO: This line of code loads data into the 'movieDBDataSet.Movie' table. You can move, or remove it, as needed.
+            this.movieTableAdapter.Fill(this.movieDBDataSet.Movie);
+
+            // await moviedb.Movies.LoadAsync();
+            //  movieBindingSource.DataSource = moviedb.Movies.Local;
         }
     }
 }
