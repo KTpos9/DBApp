@@ -27,5 +27,20 @@ namespace DBApps.QueryForm
             // await moviedb.Movies.LoadAsync();
             //  movieBindingSource.DataSource = moviedb.Movies.Local;
         }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            if (checkBox.Checked == false)
+            {
+                this.movieDataGridView.Columns[checkBox.Text].Visible = false;
+                return;
+            }
+            this.movieDataGridView.Columns[checkBox.Text].Visible = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.movieDataGridView.Sort(movieDataGridView.Columns[comboBox1.SelectedIndex], ListSortDirection.Ascending);
+        }
     }
 }

@@ -65,7 +65,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(22, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 30);
+            this.label1.Size = new System.Drawing.Size(160, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "สืบค้นข้อมูล";
             // 
@@ -139,7 +139,7 @@
             this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Location = new System.Drawing.Point(27, 309);
+            this.button4.Location = new System.Drawing.Point(29, 309);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(766, 67);
             this.button4.TabIndex = 0;
@@ -163,7 +163,7 @@
             // 
             // information
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(846, 551);
