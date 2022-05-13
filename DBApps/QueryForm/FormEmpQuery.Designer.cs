@@ -46,26 +46,39 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.employeeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
-            this.EmpID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.employeeTableAdapter = new DBApps.MovieDBDataSetTableAdapters.EmployeeTableAdapter();
             this.tableAdapterManager = new DBApps.MovieDBDataSetTableAdapters.TableAdapterManager();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.EmpID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpPositionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpFname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpSname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpHouseNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpMoo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpSubDistrict = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpDistrict = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpProvince = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpPostalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingNavigator)).BeginInit();
             this.employeeBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -80,6 +93,7 @@
             this.employeeBindingNavigator.BindingSource = this.employeeBindingSource;
             this.employeeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.employeeBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.employeeBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.employeeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -100,7 +114,7 @@
             this.employeeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.employeeBindingNavigator.Name = "employeeBindingNavigator";
             this.employeeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employeeBindingNavigator.Size = new System.Drawing.Size(823, 25);
+            this.employeeBindingNavigator.Size = new System.Drawing.Size(823, 31);
             this.employeeBindingNavigator.TabIndex = 0;
             this.employeeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -110,7 +124,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // employeeBindingSource
@@ -126,7 +140,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -136,7 +150,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -145,7 +159,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -154,13 +168,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -175,7 +189,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -183,7 +197,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -192,20 +206,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // employeeBindingNavigatorSaveItem
             // 
             this.employeeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.employeeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("employeeBindingNavigatorSaveItem.Image")));
             this.employeeBindingNavigatorSaveItem.Name = "employeeBindingNavigatorSaveItem";
-            this.employeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.employeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.employeeBindingNavigatorSaveItem.Text = "Save Data";
             this.employeeBindingNavigatorSaveItem.Click += new System.EventHandler(this.employeeBindingNavigatorSaveItem_Click);
             // 
@@ -215,109 +229,26 @@
             this.employeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EmpID,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
+            this.EmpPassword,
+            this.EmpSalary,
+            this.EmpPositionID,
+            this.EmpPosition,
+            this.EmpFname,
+            this.EmpSname,
+            this.EmpHouseNum,
+            this.EmpMoo,
+            this.EmpSubDistrict,
+            this.EmpDistrict,
+            this.EmpProvince,
+            this.EmpPostalCode,
+            this.MovieID});
             this.employeeDataGridView.DataSource = this.employeeBindingSource;
             this.employeeDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.employeeDataGridView.Location = new System.Drawing.Point(0, 25);
+            this.employeeDataGridView.Location = new System.Drawing.Point(0, 31);
             this.employeeDataGridView.Name = "employeeDataGridView";
+            this.employeeDataGridView.RowHeadersWidth = 51;
             this.employeeDataGridView.Size = new System.Drawing.Size(823, 220);
             this.employeeDataGridView.TabIndex = 1;
-            // 
-            // EmpID
-            // 
-            this.EmpID.DataPropertyName = "EmpID";
-            this.EmpID.HeaderText = "EmpID";
-            this.EmpID.Name = "EmpID";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "EmpPassword";
-            this.dataGridViewTextBoxColumn2.HeaderText = "EmpPassword";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "EmpSalary";
-            this.dataGridViewTextBoxColumn3.HeaderText = "EmpSalary";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "EmpPositionID";
-            this.dataGridViewTextBoxColumn4.HeaderText = "EmpPositionID";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "EmpPosition";
-            this.dataGridViewTextBoxColumn5.HeaderText = "EmpPosition";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "EmpFname";
-            this.dataGridViewTextBoxColumn6.HeaderText = "EmpFname";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "EmpSname";
-            this.dataGridViewTextBoxColumn7.HeaderText = "EmpSname";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "EmpHouseNum";
-            this.dataGridViewTextBoxColumn8.HeaderText = "EmpHouseNum";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "EmpMoo";
-            this.dataGridViewTextBoxColumn9.HeaderText = "EmpMoo";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "EmpSubDistrict";
-            this.dataGridViewTextBoxColumn10.HeaderText = "EmpSubDistrict";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "EmpDistrict";
-            this.dataGridViewTextBoxColumn11.HeaderText = "EmpDistrict";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "EmpProvince";
-            this.dataGridViewTextBoxColumn12.HeaderText = "EmpProvince";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "EmpPostalCode";
-            this.dataGridViewTextBoxColumn13.HeaderText = "EmpPostalCode";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "MovieID";
-            this.dataGridViewTextBoxColumn14.HeaderText = "MovieID";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // comboBox1
             // 
@@ -338,7 +269,7 @@
             "MovieID"});
             this.comboBox1.Location = new System.Drawing.Point(12, 283);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 29);
+            this.comboBox1.Size = new System.Drawing.Size(198, 36);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -347,7 +278,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 259);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 21);
+            this.label1.Size = new System.Drawing.Size(89, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "Order By";
             // 
@@ -374,7 +305,7 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(6, 28);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(75, 25);
+            this.checkBox1.Size = new System.Drawing.Size(92, 32);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "EmpID";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -382,18 +313,274 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox14);
+            this.groupBox1.Controls.Add(this.checkBox13);
+            this.groupBox1.Controls.Add(this.checkBox12);
+            this.groupBox1.Controls.Add(this.checkBox11);
+            this.groupBox1.Controls.Add(this.checkBox10);
+            this.groupBox1.Controls.Add(this.checkBox9);
+            this.groupBox1.Controls.Add(this.checkBox8);
+            this.groupBox1.Controls.Add(this.checkBox7);
+            this.groupBox1.Controls.Add(this.checkBox6);
+            this.groupBox1.Controls.Add(this.checkBox5);
+            this.groupBox1.Controls.Add(this.checkBox4);
+            this.groupBox1.Controls.Add(this.checkBox3);
+            this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(330, 268);
+            this.groupBox1.Location = new System.Drawing.Point(251, 268);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 180);
+            this.groupBox1.Size = new System.Drawing.Size(560, 180);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Coulmns";
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(104, 28);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(154, 32);
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "EmpPassword";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(264, 28);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(126, 32);
+            this.checkBox3.TabIndex = 6;
+            this.checkBox3.Text = "EmpSalary";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(396, 28);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(162, 32);
+            this.checkBox4.TabIndex = 7;
+            this.checkBox4.Text = "EmpPositionID";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(6, 67);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(143, 32);
+            this.checkBox5.TabIndex = 8;
+            this.checkBox5.Text = "EmpPosition";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(144, 67);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(131, 32);
+            this.checkBox6.TabIndex = 9;
+            this.checkBox6.Text = "EmpFname";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(281, 67);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(132, 32);
+            this.checkBox7.TabIndex = 10;
+            this.checkBox7.Text = "EmpSname";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(419, 67);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(171, 32);
+            this.checkBox8.TabIndex = 11;
+            this.checkBox8.Text = "EmpHouseNum";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(6, 105);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(115, 32);
+            this.checkBox9.TabIndex = 12;
+            this.checkBox9.Text = "EmpMoo";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(121, 105);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(169, 32);
+            this.checkBox10.TabIndex = 13;
+            this.checkBox10.Text = "EmpSubDistrict";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(296, 105);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(135, 32);
+            this.checkBox11.TabIndex = 14;
+            this.checkBox11.Text = "EmpDistrict";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(437, 105);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(148, 32);
+            this.checkBox12.TabIndex = 15;
+            this.checkBox12.Text = "EmpProvince";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(6, 142);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(171, 32);
+            this.checkBox13.TabIndex = 16;
+            this.checkBox13.Text = "EmpPostalCode";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // EmpID
+            // 
+            this.EmpID.DataPropertyName = "EmpID";
+            this.EmpID.HeaderText = "EmpID";
+            this.EmpID.MinimumWidth = 6;
+            this.EmpID.Name = "EmpID";
+            this.EmpID.Width = 125;
+            // 
+            // EmpPassword
+            // 
+            this.EmpPassword.DataPropertyName = "EmpPassword";
+            this.EmpPassword.HeaderText = "EmpPassword";
+            this.EmpPassword.MinimumWidth = 6;
+            this.EmpPassword.Name = "EmpPassword";
+            this.EmpPassword.Width = 125;
+            // 
+            // EmpSalary
+            // 
+            this.EmpSalary.DataPropertyName = "EmpSalary";
+            this.EmpSalary.HeaderText = "EmpSalary";
+            this.EmpSalary.MinimumWidth = 6;
+            this.EmpSalary.Name = "EmpSalary";
+            this.EmpSalary.Width = 125;
+            // 
+            // EmpPositionID
+            // 
+            this.EmpPositionID.DataPropertyName = "EmpPositionID";
+            this.EmpPositionID.HeaderText = "EmpPositionID";
+            this.EmpPositionID.MinimumWidth = 6;
+            this.EmpPositionID.Name = "EmpPositionID";
+            this.EmpPositionID.Width = 125;
+            // 
+            // EmpPosition
+            // 
+            this.EmpPosition.DataPropertyName = "EmpPosition";
+            this.EmpPosition.HeaderText = "EmpPosition";
+            this.EmpPosition.MinimumWidth = 6;
+            this.EmpPosition.Name = "EmpPosition";
+            this.EmpPosition.Width = 125;
+            // 
+            // EmpFname
+            // 
+            this.EmpFname.DataPropertyName = "EmpFname";
+            this.EmpFname.HeaderText = "EmpFname";
+            this.EmpFname.MinimumWidth = 6;
+            this.EmpFname.Name = "EmpFname";
+            this.EmpFname.Width = 125;
+            // 
+            // EmpSname
+            // 
+            this.EmpSname.DataPropertyName = "EmpSname";
+            this.EmpSname.HeaderText = "EmpSname";
+            this.EmpSname.MinimumWidth = 6;
+            this.EmpSname.Name = "EmpSname";
+            this.EmpSname.Width = 125;
+            // 
+            // EmpHouseNum
+            // 
+            this.EmpHouseNum.DataPropertyName = "EmpHouseNum";
+            this.EmpHouseNum.HeaderText = "EmpHouseNum";
+            this.EmpHouseNum.MinimumWidth = 6;
+            this.EmpHouseNum.Name = "EmpHouseNum";
+            this.EmpHouseNum.Width = 125;
+            // 
+            // EmpMoo
+            // 
+            this.EmpMoo.DataPropertyName = "EmpMoo";
+            this.EmpMoo.HeaderText = "EmpMoo";
+            this.EmpMoo.MinimumWidth = 6;
+            this.EmpMoo.Name = "EmpMoo";
+            this.EmpMoo.Width = 125;
+            // 
+            // EmpSubDistrict
+            // 
+            this.EmpSubDistrict.DataPropertyName = "EmpSubDistrict";
+            this.EmpSubDistrict.HeaderText = "EmpSubDistrict";
+            this.EmpSubDistrict.MinimumWidth = 6;
+            this.EmpSubDistrict.Name = "EmpSubDistrict";
+            this.EmpSubDistrict.Width = 125;
+            // 
+            // EmpDistrict
+            // 
+            this.EmpDistrict.DataPropertyName = "EmpDistrict";
+            this.EmpDistrict.HeaderText = "EmpDistrict";
+            this.EmpDistrict.MinimumWidth = 6;
+            this.EmpDistrict.Name = "EmpDistrict";
+            this.EmpDistrict.Width = 125;
+            // 
+            // EmpProvince
+            // 
+            this.EmpProvince.DataPropertyName = "EmpProvince";
+            this.EmpProvince.HeaderText = "EmpProvince";
+            this.EmpProvince.MinimumWidth = 6;
+            this.EmpProvince.Name = "EmpProvince";
+            this.EmpProvince.Width = 125;
+            // 
+            // EmpPostalCode
+            // 
+            this.EmpPostalCode.DataPropertyName = "EmpPostalCode";
+            this.EmpPostalCode.HeaderText = "EmpPostalCode";
+            this.EmpPostalCode.MinimumWidth = 6;
+            this.EmpPostalCode.Name = "EmpPostalCode";
+            this.EmpPostalCode.Width = 125;
+            // 
+            // MovieID
+            // 
+            this.MovieID.DataPropertyName = "MovieID";
+            this.MovieID.HeaderText = "MovieID";
+            this.MovieID.MinimumWidth = 6;
+            this.MovieID.Name = "MovieID";
+            this.MovieID.Width = 125;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(183, 142);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(108, 32);
+            this.checkBox14.TabIndex = 17;
+            this.checkBox14.Text = "MovieID";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
             // FormEmpQuery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 460);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -441,20 +628,33 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpSalary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpPositionID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpPosition;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpFname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpSname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpHouseNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpMoo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpSubDistrict;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpDistrict;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpProvince;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpPostalCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MovieID;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
     }
 }
