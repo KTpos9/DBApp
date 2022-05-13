@@ -172,6 +172,12 @@
     <Compile Include="QueryForm\FormMovieQuery.Designer.cs">
       <DependentUpon>FormMovieQuery.cs</DependentUpon>
     </Compile>
+    <Compile Include="QueryForm\FormRevQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryForm\FormRevQuery.Designer.cs">
+      <DependentUpon>FormRevQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Revenue.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
@@ -220,6 +226,9 @@
     </Compile>
     <EmbeddedResource Include="QueryForm\FormMovieQuery.resx">
       <DependentUpon>FormMovieQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryForm\FormRevQuery.resx">
+      <DependentUpon>FormRevQuery.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="MovieModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
