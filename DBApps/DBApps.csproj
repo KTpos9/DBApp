@@ -329,6 +329,7 @@
       <DependentUpon>MovieModel.edmx</DependentUpon>
       <LastGenOutput>MovieModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ic_fluent_document_edit_24_filled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
