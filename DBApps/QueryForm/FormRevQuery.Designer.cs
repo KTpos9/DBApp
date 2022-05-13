@@ -62,6 +62,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueBindingNavigator)).BeginInit();
@@ -292,6 +293,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox5);
             this.groupBox1.Controls.Add(this.checkBox14);
             this.groupBox1.Controls.Add(this.checkBox4);
             this.groupBox1.Controls.Add(this.checkBox3);
@@ -315,6 +317,7 @@
             this.checkBox14.TabIndex = 17;
             this.checkBox14.Text = "MovieID";
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -327,6 +330,7 @@
             this.checkBox4.TabIndex = 7;
             this.checkBox4.Text = "RevenueDate";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -339,6 +343,7 @@
             this.checkBox3.TabIndex = 6;
             this.checkBox3.Text = "RevenueID";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -347,10 +352,11 @@
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(19, 111);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(141, 32);
+            this.checkBox2.Size = new System.Drawing.Size(148, 32);
             this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "MovieName";
+            this.checkBox2.Text = "RevenueType";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -359,10 +365,11 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(19, 73);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 32);
+            this.checkBox1.Size = new System.Drawing.Size(146, 32);
             this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "MoviePrice";
+            this.checkBox1.Text = "RevenueUser";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label1
             // 
@@ -387,6 +394,21 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 36);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Location = new System.Drawing.Point(196, 111);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(149, 32);
+            this.checkBox5.TabIndex = 18;
+            this.checkBox5.Text = "RevenuePrice";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox5.Enter += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // FormRevQuery
             // 
@@ -451,5 +473,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox5;
     }
 }

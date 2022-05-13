@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace DBApps.QueryForm
 {
-    public partial class FormRevQuery : Form
+    public partial class FormBooking : Form
     {
-        public FormRevQuery()
+        public FormBooking()
         {
             InitializeComponent();
         }
 
-        private void revenueBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void bookingBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.revenueBindingSource.EndEdit();
+            this.bookingBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.movieDBDataSet);
 
         }
 
-        private void FormRevQuery_Load(object sender, EventArgs e)
+        private void FormBooking_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'movieDBDataSet.Revenue' table. You can move, or remove it, as needed.
-            this.revenueTableAdapter.Fill(this.movieDBDataSet.Revenue);
+            // TODO: This line of code loads data into the 'movieDBDataSet.Booking' table. You can move, or remove it, as needed.
+            this.bookingTableAdapter.Fill(this.movieDBDataSet.Booking);
 
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -36,15 +36,15 @@ namespace DBApps.QueryForm
             CheckBox checkBox = (CheckBox)sender;
             if (checkBox.Checked == false)
             {
-                this.revenueDataGridView.Columns[checkBox.Text].Visible = false;
+                this.bookingDataGridView.Columns[checkBox.Text].Visible = false;
                 return;
             }
-            this.revenueDataGridView.Columns[checkBox.Text].Visible = true;
+            this.bookingDataGridView.Columns[checkBox.Text].Visible = true;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.revenueDataGridView.Sort(revenueDataGridView.Columns[comboBox1.SelectedIndex], ListSortDirection.Ascending);
+            this.bookingDataGridView.Sort(bookingDataGridView.Columns[comboBox1.SelectedIndex], ListSortDirection.Ascending);
         }
     }
 }
