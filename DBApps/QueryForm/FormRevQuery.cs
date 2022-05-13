@@ -31,5 +31,20 @@ namespace DBApps.QueryForm
             this.revenueTableAdapter.Fill(this.movieDBDataSet.Revenue);
 
         }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            if (checkBox.Checked == false)
+            {
+                this.revenueDataGridView.Columns[checkBox.Text].Visible = false;
+                return;
+            }
+            this.revenueDataGridView.Columns[checkBox.Text].Visible = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.revenueDataGridView.Sort(revenueDataGridView.Columns[comboBox1.SelectedIndex], ListSortDirection.Ascending);
+        }
     }
 }

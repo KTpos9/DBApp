@@ -19,7 +19,8 @@ namespace DBApps.Forms
        
         private void button1_Click(object sender, EventArgs e)
         {
-           
+           Form form = new QueryForm.FormRevQuery();
+            form.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,6 +33,12 @@ namespace DBApps.Forms
         {
             Form form = new QueryForm.FormMovieQuery();
             form.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }
