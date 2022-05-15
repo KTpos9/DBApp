@@ -21,5 +21,16 @@ namespace DBApps.Forms
             Form form = new EditForm.FormMovieEdit();
             form.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form form = new EditForm.FormRevEdit();
+            form.Show();
+        }
+
+        private void buttonBooking_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

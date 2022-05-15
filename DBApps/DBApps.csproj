@@ -69,6 +69,12 @@
     <Compile Include="Customer.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditForm\FormBookingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\FormBookingEdit.Designer.cs">
+      <DependentUpon>FormBookingEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditForm\FormEmpEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="EditForm\FormMovieEdit.Designer.cs">
       <DependentUpon>FormMovieEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\FormRevEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\FormRevEdit.Designer.cs">
+      <DependentUpon>FormRevEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
@@ -208,11 +220,17 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditForm\FormBookingEdit.resx">
+      <DependentUpon>FormBookingEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditForm\FormEmpEdit.resx">
       <DependentUpon>FormEmpEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditForm\FormMovieEdit.resx">
       <DependentUpon>FormMovieEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\FormRevEdit.resx">
+      <DependentUpon>FormRevEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
