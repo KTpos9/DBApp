@@ -29,7 +29,7 @@ namespace DBApps.QueryForm
         {
             // TODO: This line of code loads data into the 'movieDBDataSet.Revenue' table. You can move, or remove it, as needed.
             this.revenueTableAdapter.Fill(this.movieDBDataSet.Revenue);
-
+            labelTotal.Text = movieDBDataSet.Revenue.Compute("SUM(RevenuePrice)", string.Empty).ToString();
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
