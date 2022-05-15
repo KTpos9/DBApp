@@ -30,7 +30,7 @@ namespace DBApps
         private System.Drawing.Color clickedColor = System.Drawing.Color.FromArgb(234, 234, 234);
         private System.Drawing.Color nonClickColor = System.Drawing.Color.FromArgb(243, 243, 243);
         private System.Drawing.Color accentColor = System.Drawing.Color.FromArgb(0,120,212);
-
+        #region LabelEvents
         private void label_MouseEnter(object sender, EventArgs e)
         {
             Label label = (Label)sender;
@@ -75,6 +75,10 @@ namespace DBApps
             {
                 OpenMenuForm(new Forms.information());
             }
+            else if((Label)sender == labelEdit)
+            {
+                OpenMenuForm(new Forms.FormEdit());
+            }
         }
 
         //change all the label's BackColor to nonClickColor
@@ -102,6 +106,7 @@ namespace DBApps
                 leftBorderAccentColor.BringToFront();
             }
         }
+        #endregion
         private void OpenMenuForm(Form menuForm)
         {
             if (currentActiveForm != null)

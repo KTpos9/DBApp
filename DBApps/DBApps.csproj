@@ -69,6 +69,18 @@
     <Compile Include="Customer.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditForm\FormEmpEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\FormEmpEdit.Designer.cs">
+      <DependentUpon>FormEmpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\FormMovieEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\FormMovieEdit.Designer.cs">
+      <DependentUpon>FormMovieEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEdit.Designer.cs">
+      <DependentUpon>FormEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Movie.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
@@ -190,11 +208,20 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditForm\FormEmpEdit.resx">
+      <DependentUpon>FormEmpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\FormMovieEdit.resx">
+      <DependentUpon>FormMovieEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEdit.resx">
+      <DependentUpon>FormEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QueryForm\FormBooking.resx">
       <DependentUpon>FormBooking.cs</DependentUpon>
