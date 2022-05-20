@@ -37,10 +37,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonMovieSchedule = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +62,7 @@
             this.buttonBooking.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonBooking.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBooking.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buttonBooking.Location = new System.Drawing.Point(35, 308);
+            this.buttonBooking.Location = new System.Drawing.Point(35, 381);
             this.buttonBooking.Name = "buttonBooking";
             this.buttonBooking.Size = new System.Drawing.Size(766, 67);
             this.buttonBooking.TabIndex = 4;
@@ -117,7 +120,7 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox4.Image = global::DBApps.Properties.Resources.ic_fluent_chevron_right_24_filled;
             this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new System.Drawing.Point(752, 329);
+            this.pictureBox4.Location = new System.Drawing.Point(750, 402);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(27, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -161,16 +164,45 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonMovieSchedule
+            // 
+            this.buttonMovieSchedule.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonMovieSchedule.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMovieSchedule.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.buttonMovieSchedule.Location = new System.Drawing.Point(35, 308);
+            this.buttonMovieSchedule.Name = "buttonMovieSchedule";
+            this.buttonMovieSchedule.Size = new System.Drawing.Size(766, 67);
+            this.buttonMovieSchedule.TabIndex = 4;
+            this.buttonMovieSchedule.Text = " ข้อมูลรอบฉาย";
+            this.buttonMovieSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMovieSchedule.UseVisualStyleBackColor = false;
+            this.buttonMovieSchedule.Click += new System.EventHandler(this.buttonMovieSchedule_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Image = global::DBApps.Properties.Resources.ic_fluent_chevron_right_24_filled;
+            this.pictureBox5.InitialImage = null;
+            this.pictureBox5.Location = new System.Drawing.Point(750, 329);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
+            // 
             // FormEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 551);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonMovieSchedule);
             this.Controls.Add(this.buttonBooking);
             this.Controls.Add(this.buttonMovie);
             this.Controls.Add(this.buttonEmp);
@@ -184,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +233,7 @@
         private System.Windows.Forms.Button buttonMovie;
         private System.Windows.Forms.Button buttonEmp;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonMovieSchedule;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
