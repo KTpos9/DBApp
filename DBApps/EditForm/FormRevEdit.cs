@@ -22,26 +22,26 @@ namespace DBApps.EditForm
             textRevID.Text = revenueDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
             dateTimeRevDate.Value = Convert.ToDateTime(revenueDataGridView.Rows[e.RowIndex].Cells[1].Value);
             textRevUser.Text = revenueDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            textRevType.Text = revenueDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+            comboBox1.Text = revenueDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
             textRevPrice.Text = revenueDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
             textMovieID.Text = revenueDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            this.revenueTableAdapter.Insert(textRevID.Text, dateTimeRevDate.Value.Date, textRevUser.Text, textRevType.Text, Convert.ToInt32(textRevPrice.Text), textMovieID.Text);
+            this.revenueTableAdapter.Insert(textRevID.Text, dateTimeRevDate.Value.Date, textRevUser.Text, comboBox1.Text, Convert.ToInt32(textRevPrice.Text), textMovieID.Text);
             this.revenueTableAdapter.Fill(this.movieDBDataSet.Revenue);
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            this.revenueTableAdapter.Update1(dateTimeRevDate.Value.Date, textRevUser.Text, textRevType.Text, Convert.ToInt32(textRevPrice.Text), textMovieID.Text, textRevID.Text);
+            this.revenueTableAdapter.Update1(dateTimeRevDate.Value.Date, textRevUser.Text, comboBox1.Text, Convert.ToInt32(textRevPrice.Text), textMovieID.Text, textRevID.Text);
             this.revenueTableAdapter.Fill(this.movieDBDataSet.Revenue);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            this.revenueTableAdapter.Delete(textRevID.Text, dateTimeRevDate.Value, textRevUser.Text, textRevType.Text, Convert.ToInt32(textRevPrice.Text), textMovieID.Text);
+            this.revenueTableAdapter.Delete(textRevID.Text, dateTimeRevDate.Value, textRevUser.Text, comboBox1.Text, Convert.ToInt32(textRevPrice.Text), textMovieID.Text);
             this.revenueTableAdapter.Fill(this.movieDBDataSet.Revenue);
         }
 

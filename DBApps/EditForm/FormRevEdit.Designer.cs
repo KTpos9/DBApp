@@ -40,22 +40,22 @@
             this.revenueTableAdapter = new DBApps.MovieDBDataSetTableAdapters.RevenueTableAdapter();
             this.tableAdapterManager = new DBApps.MovieDBDataSetTableAdapters.TableAdapterManager();
             this.revenueDataGridView = new System.Windows.Forms.DataGridView();
+            this.dateTimeRevDate = new System.Windows.Forms.DateTimePicker();
+            this.textRevID = new System.Windows.Forms.TextBox();
+            this.textRevUser = new System.Windows.Forms.TextBox();
+            this.textMovieID = new System.Windows.Forms.TextBox();
+            this.textRevPrice = new System.Windows.Forms.TextBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonInsert = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimeRevDate = new System.Windows.Forms.DateTimePicker();
-            this.textRevID = new System.Windows.Forms.TextBox();
-            this.textRevUser = new System.Windows.Forms.TextBox();
-            this.textMovieID = new System.Windows.Forms.TextBox();
-            this.textRevPrice = new System.Windows.Forms.TextBox();
-            this.textRevType = new System.Windows.Forms.TextBox();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonInsert = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             revenueIDLabel = new System.Windows.Forms.Label();
             revenueDateLabel = new System.Windows.Forms.Label();
             revenueUserLabel = new System.Windows.Forms.Label();
@@ -66,6 +66,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.revenueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // revenueIDLabel
+            // 
+            revenueIDLabel.AutoSize = true;
+            revenueIDLabel.Location = new System.Drawing.Point(38, 243);
+            revenueIDLabel.Name = "revenueIDLabel";
+            revenueIDLabel.Size = new System.Drawing.Size(91, 21);
+            revenueIDLabel.TabIndex = 1;
+            revenueIDLabel.Text = "Revenue ID:";
+            // 
+            // revenueDateLabel
+            // 
+            revenueDateLabel.AutoSize = true;
+            revenueDateLabel.Location = new System.Drawing.Point(21, 279);
+            revenueDateLabel.Name = "revenueDateLabel";
+            revenueDateLabel.Size = new System.Drawing.Size(109, 21);
+            revenueDateLabel.TabIndex = 3;
+            revenueDateLabel.Text = "Revenue Date:";
+            // 
+            // revenueUserLabel
+            // 
+            revenueUserLabel.AutoSize = true;
+            revenueUserLabel.Location = new System.Drawing.Point(5, 313);
+            revenueUserLabel.Name = "revenueUserLabel";
+            revenueUserLabel.Size = new System.Drawing.Size(125, 21);
+            revenueUserLabel.TabIndex = 5;
+            revenueUserLabel.Text = "Revenue Source:";
+            // 
+            // revenueTypeLabel
+            // 
+            revenueTypeLabel.AutoSize = true;
+            revenueTypeLabel.Location = new System.Drawing.Point(327, 243);
+            revenueTypeLabel.Name = "revenueTypeLabel";
+            revenueTypeLabel.Size = new System.Drawing.Size(108, 21);
+            revenueTypeLabel.TabIndex = 7;
+            revenueTypeLabel.Text = "Revenue Type:";
+            // 
+            // revenuePriceLabel
+            // 
+            revenuePriceLabel.AutoSize = true;
+            revenuePriceLabel.Location = new System.Drawing.Point(327, 278);
+            revenuePriceLabel.Name = "revenuePriceLabel";
+            revenuePriceLabel.Size = new System.Drawing.Size(111, 21);
+            revenuePriceLabel.TabIndex = 9;
+            revenuePriceLabel.Text = "Revenue Price:";
+            // 
+            // movieIDLabel
+            // 
+            movieIDLabel.AutoSize = true;
+            movieIDLabel.Location = new System.Drawing.Point(360, 313);
+            movieIDLabel.Name = "movieIDLabel";
+            movieIDLabel.Size = new System.Drawing.Size(75, 21);
+            movieIDLabel.TabIndex = 11;
+            movieIDLabel.Text = "Movie ID:";
             // 
             // movieDBDataSet
             // 
@@ -113,137 +167,41 @@
             this.revenueDataGridView.TabIndex = 1;
             this.revenueDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.revenueDataGridView_RowHeaderMouseClick);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RevenueID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "RevenueID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "RevenueDate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "RevenueDate";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "RevenueUser";
-            this.dataGridViewTextBoxColumn3.HeaderText = "RevenueUser";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "RevenueType";
-            this.dataGridViewTextBoxColumn4.HeaderText = "RevenueType";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "RevenuePrice";
-            this.dataGridViewTextBoxColumn5.HeaderText = "RevenuePrice";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "MovieID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "MovieID";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // revenueIDLabel
-            // 
-            revenueIDLabel.AutoSize = true;
-            revenueIDLabel.Location = new System.Drawing.Point(29, 243);
-            revenueIDLabel.Name = "revenueIDLabel";
-            revenueIDLabel.Size = new System.Drawing.Size(91, 21);
-            revenueIDLabel.TabIndex = 1;
-            revenueIDLabel.Text = "Revenue ID:";
-            // 
-            // revenueDateLabel
-            // 
-            revenueDateLabel.AutoSize = true;
-            revenueDateLabel.Location = new System.Drawing.Point(12, 279);
-            revenueDateLabel.Name = "revenueDateLabel";
-            revenueDateLabel.Size = new System.Drawing.Size(109, 21);
-            revenueDateLabel.TabIndex = 3;
-            revenueDateLabel.Text = "Revenue Date:";
-            // 
-            // revenueUserLabel
-            // 
-            revenueUserLabel.AutoSize = true;
-            revenueUserLabel.Location = new System.Drawing.Point(12, 313);
-            revenueUserLabel.Name = "revenueUserLabel";
-            revenueUserLabel.Size = new System.Drawing.Size(108, 21);
-            revenueUserLabel.TabIndex = 5;
-            revenueUserLabel.Text = "Revenue User:";
-            // 
-            // revenueTypeLabel
-            // 
-            revenueTypeLabel.AutoSize = true;
-            revenueTypeLabel.Location = new System.Drawing.Point(318, 243);
-            revenueTypeLabel.Name = "revenueTypeLabel";
-            revenueTypeLabel.Size = new System.Drawing.Size(108, 21);
-            revenueTypeLabel.TabIndex = 7;
-            revenueTypeLabel.Text = "Revenue Type:";
-            // 
-            // revenuePriceLabel
-            // 
-            revenuePriceLabel.AutoSize = true;
-            revenuePriceLabel.Location = new System.Drawing.Point(318, 278);
-            revenuePriceLabel.Name = "revenuePriceLabel";
-            revenuePriceLabel.Size = new System.Drawing.Size(111, 21);
-            revenuePriceLabel.TabIndex = 9;
-            revenuePriceLabel.Text = "Revenue Price:";
-            // 
-            // movieIDLabel
-            // 
-            movieIDLabel.AutoSize = true;
-            movieIDLabel.Location = new System.Drawing.Point(351, 313);
-            movieIDLabel.Name = "movieIDLabel";
-            movieIDLabel.Size = new System.Drawing.Size(75, 21);
-            movieIDLabel.TabIndex = 11;
-            movieIDLabel.Text = "Movie ID:";
-            // 
             // dateTimeRevDate
             // 
-            this.dateTimeRevDate.Location = new System.Drawing.Point(127, 273);
+            this.dateTimeRevDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeRevDate.Location = new System.Drawing.Point(136, 273);
             this.dateTimeRevDate.Name = "dateTimeRevDate";
             this.dateTimeRevDate.Size = new System.Drawing.Size(185, 29);
             this.dateTimeRevDate.TabIndex = 12;
             // 
             // textRevID
             // 
-            this.textRevID.Location = new System.Drawing.Point(127, 238);
+            this.textRevID.Location = new System.Drawing.Point(136, 238);
             this.textRevID.Name = "textRevID";
             this.textRevID.Size = new System.Drawing.Size(185, 29);
             this.textRevID.TabIndex = 13;
             // 
             // textRevUser
             // 
-            this.textRevUser.Location = new System.Drawing.Point(126, 310);
+            this.textRevUser.Location = new System.Drawing.Point(135, 310);
             this.textRevUser.Name = "textRevUser";
             this.textRevUser.Size = new System.Drawing.Size(185, 29);
             this.textRevUser.TabIndex = 13;
             // 
             // textMovieID
             // 
-            this.textMovieID.Location = new System.Drawing.Point(432, 310);
+            this.textMovieID.Location = new System.Drawing.Point(441, 310);
             this.textMovieID.Name = "textMovieID";
             this.textMovieID.Size = new System.Drawing.Size(185, 29);
             this.textMovieID.TabIndex = 13;
             // 
             // textRevPrice
             // 
-            this.textRevPrice.Location = new System.Drawing.Point(432, 276);
+            this.textRevPrice.Location = new System.Drawing.Point(441, 276);
             this.textRevPrice.Name = "textRevPrice";
             this.textRevPrice.Size = new System.Drawing.Size(185, 29);
             this.textRevPrice.TabIndex = 13;
-            // 
-            // textRevType
-            // 
-            this.textRevType.Location = new System.Drawing.Point(432, 240);
-            this.textRevType.Name = "textRevType";
-            this.textRevType.Size = new System.Drawing.Size(185, 29);
-            this.textRevType.TabIndex = 13;
             // 
             // buttonDelete
             // 
@@ -285,16 +243,63 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RevenueID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "RevenueID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "RevenueDate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "RevenueDate";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "RevenueUser";
+            this.dataGridViewTextBoxColumn3.HeaderText = "RevenueSource";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "RevenueType";
+            this.dataGridViewTextBoxColumn4.HeaderText = "RevenueType";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "RevenuePrice";
+            this.dataGridViewTextBoxColumn5.HeaderText = "RevenuePrice";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "MovieID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "MovieID";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "รายรับ",
+            "รายจ่าย"});
+            this.comboBox1.Location = new System.Drawing.Point(441, 241);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(185, 29);
+            this.comboBox1.TabIndex = 39;
+            // 
             // FormRevEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 434);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonInsert);
             this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.textRevType);
             this.Controls.Add(this.textRevPrice);
             this.Controls.Add(this.textMovieID);
             this.Controls.Add(this.textRevUser);
@@ -327,21 +332,21 @@
         private MovieDBDataSetTableAdapters.RevenueTableAdapter revenueTableAdapter;
         private MovieDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView revenueDataGridView;
+        private System.Windows.Forms.DateTimePicker dateTimeRevDate;
+        private System.Windows.Forms.TextBox textRevID;
+        private System.Windows.Forms.TextBox textRevUser;
+        private System.Windows.Forms.TextBox textMovieID;
+        private System.Windows.Forms.TextBox textRevPrice;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonInsert;
+        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DateTimePicker dateTimeRevDate;
-        private System.Windows.Forms.TextBox textRevID;
-        private System.Windows.Forms.TextBox textRevUser;
-        private System.Windows.Forms.TextBox textMovieID;
-        private System.Windows.Forms.TextBox textRevPrice;
-        private System.Windows.Forms.TextBox textRevType;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonInsert;
-        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
