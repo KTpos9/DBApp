@@ -29,24 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRevQuery));
             this.movieDBDataSet = new DBApps.MovieDBDataSet();
             this.revenueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.revenueTableAdapter = new DBApps.MovieDBDataSetTableAdapters.RevenueTableAdapter();
             this.tableAdapterManager = new DBApps.MovieDBDataSetTableAdapters.TableAdapterManager();
-            this.revenueBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.revenueBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.revenueDataGridView = new System.Windows.Forms.DataGridView();
             this.RevenueID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RevenueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,10 +50,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelTotal = new System.Windows.Forms.Label();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.revenueBindingNavigator)).BeginInit();
-            this.revenueBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.revenueDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -97,132 +82,6 @@
             this.tableAdapterManager.RevenueTableAdapter = this.revenueTableAdapter;
             this.tableAdapterManager.UpdateOrder = DBApps.MovieDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // revenueBindingNavigator
-            // 
-            this.revenueBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.revenueBindingNavigator.BindingSource = this.revenueBindingSource;
-            this.revenueBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.revenueBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.revenueBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.revenueBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.revenueBindingNavigatorSaveItem});
-            this.revenueBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.revenueBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.revenueBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.revenueBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.revenueBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.revenueBindingNavigator.Name = "revenueBindingNavigator";
-            this.revenueBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.revenueBindingNavigator.Size = new System.Drawing.Size(823, 27);
-            this.revenueBindingNavigator.TabIndex = 0;
-            this.revenueBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // revenueBindingNavigatorSaveItem
-            // 
-            this.revenueBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.revenueBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("revenueBindingNavigatorSaveItem.Image")));
-            this.revenueBindingNavigatorSaveItem.Name = "revenueBindingNavigatorSaveItem";
-            this.revenueBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
-            this.revenueBindingNavigatorSaveItem.Text = "Save Data";
-            this.revenueBindingNavigatorSaveItem.Click += new System.EventHandler(this.revenueBindingNavigatorSaveItem_Click);
-            // 
             // revenueDataGridView
             // 
             this.revenueDataGridView.AutoGenerateColumns = false;
@@ -237,7 +96,7 @@
             this.MovieID});
             this.revenueDataGridView.DataSource = this.revenueBindingSource;
             this.revenueDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.revenueDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.revenueDataGridView.Location = new System.Drawing.Point(0, 0);
             this.revenueDataGridView.Name = "revenueDataGridView";
             this.revenueDataGridView.RowHeadersWidth = 51;
             this.revenueDataGridView.RowTemplate.Height = 24;
@@ -300,7 +159,7 @@
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(251, 280);
+            this.groupBox1.Location = new System.Drawing.Point(281, 255);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(349, 180);
             this.groupBox1.TabIndex = 9;
@@ -389,7 +248,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 280);
+            this.label1.Location = new System.Drawing.Point(12, 255);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 21);
             this.label1.TabIndex = 8;
@@ -405,7 +264,7 @@
             "RevenueType",
             "RevenuePrice",
             "MovieID"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 311);
+            this.comboBox1.Location = new System.Drawing.Point(17, 286);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 29);
             this.comboBox1.TabIndex = 7;
@@ -414,11 +273,21 @@
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(40, 372);
+            this.labelTotal.Location = new System.Drawing.Point(32, 414);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(52, 21);
             this.labelTotal.TabIndex = 10;
             this.labelTotal.Text = "label2";
+            // 
+            // buttonExport
+            // 
+            this.buttonExport.Location = new System.Drawing.Point(17, 328);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(105, 40);
+            this.buttonExport.TabIndex = 11;
+            this.buttonExport.Text = "Export Data";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
             // FormRevQuery
             // 
@@ -426,12 +295,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 460);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.revenueDataGridView);
-            this.Controls.Add(this.revenueBindingNavigator);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormRevQuery";
@@ -439,9 +308,6 @@
             this.Load += new System.EventHandler(this.FormRevQuery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.revenueBindingNavigator)).EndInit();
-            this.revenueBindingNavigator.ResumeLayout(false);
-            this.revenueBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.revenueDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -456,19 +322,6 @@
         private System.Windows.Forms.BindingSource revenueBindingSource;
         private MovieDBDataSetTableAdapters.RevenueTableAdapter revenueTableAdapter;
         private MovieDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator revenueBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton revenueBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView revenueDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn RevenueID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RevenueDate;
@@ -486,5 +339,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Button buttonExport;
     }
 }

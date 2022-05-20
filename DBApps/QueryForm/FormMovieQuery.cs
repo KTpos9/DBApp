@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DBApps.QueryForm
@@ -17,9 +10,8 @@ namespace DBApps.QueryForm
         {
             InitializeComponent();
         }
-        MovieDBEntities moviedb = new MovieDBEntities();
 
-        private async void FormMovieQuery_Load(object sender, EventArgs e)
+        private void FormMovieQuery_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'movieDBDataSet.Movie' table. You can move, or remove it, as needed.
             this.movieTableAdapter.Fill(this.movieDBDataSet.Movie);
@@ -41,6 +33,11 @@ namespace DBApps.QueryForm
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.movieDataGridView.Sort(movieDataGridView.Columns[comboBox1.SelectedIndex], ListSortDirection.Ascending);
+        }
+
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            Export.ExportToExcel(movieDataGridView);
         }
     }
 }

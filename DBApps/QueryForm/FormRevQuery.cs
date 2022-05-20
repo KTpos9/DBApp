@@ -40,5 +40,10 @@ namespace DBApps.QueryForm
         {
             this.revenueDataGridView.Sort(revenueDataGridView.Columns[comboBox1.SelectedIndex], ListSortDirection.Ascending);
         }
+
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            Export.ExportToExcel(revenueDataGridView);
+        }
     }
 }

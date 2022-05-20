@@ -34,6 +34,11 @@
             this.bookingTableAdapter = new DBApps.MovieDBDataSetTableAdapters.BookingTableAdapter();
             this.tableAdapterManager = new DBApps.MovieDBDataSetTableAdapters.TableAdapterManager();
             this.bookingDataGridView = new System.Windows.Forms.DataGridView();
+            this.BookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookingNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookingCinemaNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -42,11 +47,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.BookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookingNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookingCinemaNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataGridView)).BeginInit();
@@ -96,6 +97,36 @@
             this.bookingDataGridView.Name = "bookingDataGridView";
             this.bookingDataGridView.Size = new System.Drawing.Size(601, 178);
             this.bookingDataGridView.TabIndex = 1;
+            // 
+            // BookingID
+            // 
+            this.BookingID.DataPropertyName = "BookingID";
+            this.BookingID.HeaderText = "BookingID";
+            this.BookingID.Name = "BookingID";
+            // 
+            // MSID
+            // 
+            this.MSID.DataPropertyName = "MSID";
+            this.MSID.HeaderText = "MSID";
+            this.MSID.Name = "MSID";
+            // 
+            // BookingNum
+            // 
+            this.BookingNum.DataPropertyName = "BookingNum";
+            this.BookingNum.HeaderText = "BookingNum";
+            this.BookingNum.Name = "BookingNum";
+            // 
+            // MovieName
+            // 
+            this.MovieName.DataPropertyName = "MovieName";
+            this.MovieName.HeaderText = "MovieName";
+            this.MovieName.Name = "MovieName";
+            // 
+            // BookingCinemaNo
+            // 
+            this.BookingCinemaNo.DataPropertyName = "BookingCinemaNo";
+            this.BookingCinemaNo.HeaderText = "BookingCinemaNo";
+            this.BookingCinemaNo.Name = "BookingCinemaNo";
             // 
             // groupBox1
             // 
@@ -204,41 +235,22 @@
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // BookingID
+            // buttonExport
             // 
-            this.BookingID.DataPropertyName = "BookingID";
-            this.BookingID.HeaderText = "BookingID";
-            this.BookingID.Name = "BookingID";
-            // 
-            // MSID
-            // 
-            this.MSID.DataPropertyName = "MSID";
-            this.MSID.HeaderText = "MSID";
-            this.MSID.Name = "MSID";
-            // 
-            // BookingNum
-            // 
-            this.BookingNum.DataPropertyName = "BookingNum";
-            this.BookingNum.HeaderText = "BookingNum";
-            this.BookingNum.Name = "BookingNum";
-            // 
-            // MovieName
-            // 
-            this.MovieName.DataPropertyName = "MovieName";
-            this.MovieName.HeaderText = "MovieName";
-            this.MovieName.Name = "MovieName";
-            // 
-            // BookingCinemaNo
-            // 
-            this.BookingCinemaNo.DataPropertyName = "BookingCinemaNo";
-            this.BookingCinemaNo.HeaderText = "BookingCinemaNo";
-            this.BookingCinemaNo.Name = "BookingCinemaNo";
+            this.buttonExport.Location = new System.Drawing.Point(21, 279);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(105, 40);
+            this.buttonExport.TabIndex = 10;
+            this.buttonExport.Text = "Export Data";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
             // FormBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 371);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -278,5 +290,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonExport;
     }
 }

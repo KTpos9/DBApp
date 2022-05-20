@@ -79,5 +79,10 @@ namespace DBApps.Forms
             }
             this.employeeDataGridView.Columns[checkBox.Text].Visible = true;
         }
+
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            Export.ExportToExcel(employeeDataGridView);
+        }
     }
 }

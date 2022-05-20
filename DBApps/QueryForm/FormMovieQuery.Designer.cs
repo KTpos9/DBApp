@@ -48,6 +48,7 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource1)).BeginInit();
@@ -247,12 +248,23 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // buttonExport
+            // 
+            this.buttonExport.Location = new System.Drawing.Point(24, 321);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(105, 40);
+            this.buttonExport.TabIndex = 7;
+            this.buttonExport.Text = "Export Data";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
             // FormMovieQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 460);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -294,5 +306,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MovieName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MovieCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn MovieDate;
+        private System.Windows.Forms.Button buttonExport;
     }
 }
