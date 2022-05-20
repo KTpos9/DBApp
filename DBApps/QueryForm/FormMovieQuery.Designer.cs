@@ -36,6 +36,10 @@
             this.tableAdapterManager = new DBApps.MovieDBDataSetTableAdapters.TableAdapterManager();
             this.movieDataGridView = new System.Windows.Forms.DataGridView();
             this.MovieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoviePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,10 +48,6 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.MovieDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MovieCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoviePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource1)).BeginInit();
@@ -77,7 +77,6 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BookingTableAdapter = null;
-            this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.EmployeeTableAdapter = null;
             this.tableAdapterManager.MovieScheduleTableAdapter = null;
             this.tableAdapterManager.MovieTableAdapter = this.movieTableAdapter;
@@ -88,6 +87,7 @@
             // movieDataGridView
             // 
             this.movieDataGridView.AutoGenerateColumns = false;
+            this.movieDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.movieDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.movieDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MovieID,
@@ -112,12 +112,44 @@
             this.MovieID.Name = "MovieID";
             this.MovieID.Width = 125;
             // 
+            // MoviePrice
+            // 
+            this.MoviePrice.DataPropertyName = "MoviePrice";
+            this.MoviePrice.HeaderText = "MoviePrice";
+            this.MoviePrice.MinimumWidth = 6;
+            this.MoviePrice.Name = "MoviePrice";
+            this.MoviePrice.Width = 125;
+            // 
+            // MovieName
+            // 
+            this.MovieName.DataPropertyName = "MovieName";
+            this.MovieName.HeaderText = "MovieName";
+            this.MovieName.MinimumWidth = 6;
+            this.MovieName.Name = "MovieName";
+            this.MovieName.Width = 125;
+            // 
+            // MovieCategory
+            // 
+            this.MovieCategory.DataPropertyName = "MovieCategory";
+            this.MovieCategory.HeaderText = "MovieCategory";
+            this.MovieCategory.MinimumWidth = 6;
+            this.MovieCategory.Name = "MovieCategory";
+            this.MovieCategory.Width = 125;
+            // 
+            // MovieDate
+            // 
+            this.MovieDate.DataPropertyName = "MovieDate";
+            this.MovieDate.HeaderText = "MovieDate";
+            this.MovieDate.MinimumWidth = 6;
+            this.MovieDate.Name = "MovieDate";
+            this.MovieDate.Width = 125;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 250);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 28);
+            this.label1.Size = new System.Drawing.Size(72, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Order By";
             // 
@@ -132,7 +164,7 @@
             "MovieDate"});
             this.comboBox1.Location = new System.Drawing.Point(25, 281);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 36);
+            this.comboBox1.Size = new System.Drawing.Size(198, 29);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -157,7 +189,7 @@
             this.checkBox14.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox14.Location = new System.Drawing.Point(19, 35);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(108, 32);
+            this.checkBox14.Size = new System.Drawing.Size(87, 25);
             this.checkBox14.TabIndex = 17;
             this.checkBox14.Text = "MovieID";
             this.checkBox14.UseVisualStyleBackColor = true;
@@ -170,7 +202,7 @@
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(197, 71);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(130, 32);
+            this.checkBox4.Size = new System.Drawing.Size(104, 25);
             this.checkBox4.TabIndex = 7;
             this.checkBox4.Text = "MovieDate";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -183,7 +215,7 @@
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(197, 33);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(169, 32);
+            this.checkBox3.Size = new System.Drawing.Size(135, 25);
             this.checkBox3.TabIndex = 6;
             this.checkBox3.Text = "MovieCategory";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -196,7 +228,7 @@
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(19, 111);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(141, 32);
+            this.checkBox2.Size = new System.Drawing.Size(114, 25);
             this.checkBox2.TabIndex = 5;
             this.checkBox2.Text = "MovieName";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -209,47 +241,15 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(19, 73);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 32);
+            this.checkBox1.Size = new System.Drawing.Size(106, 25);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "MoviePrice";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // MovieDate
-            // 
-            this.MovieDate.DataPropertyName = "MovieDate";
-            this.MovieDate.HeaderText = "MovieDate";
-            this.MovieDate.MinimumWidth = 6;
-            this.MovieDate.Name = "MovieDate";
-            this.MovieDate.Width = 125;
-            // 
-            // MovieCategory
-            // 
-            this.MovieCategory.DataPropertyName = "MovieCategory";
-            this.MovieCategory.HeaderText = "MovieCategory";
-            this.MovieCategory.MinimumWidth = 6;
-            this.MovieCategory.Name = "MovieCategory";
-            this.MovieCategory.Width = 125;
-            // 
-            // MovieName
-            // 
-            this.MovieName.DataPropertyName = "MovieName";
-            this.MovieName.HeaderText = "MovieName";
-            this.MovieName.MinimumWidth = 6;
-            this.MovieName.Name = "MovieName";
-            this.MovieName.Width = 125;
-            // 
-            // MoviePrice
-            // 
-            this.MoviePrice.DataPropertyName = "MoviePrice";
-            this.MoviePrice.HeaderText = "MoviePrice";
-            this.MoviePrice.MinimumWidth = 6;
-            this.MoviePrice.Name = "MoviePrice";
-            this.MoviePrice.Width = 125;
-            // 
             // FormMovieQuery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 460);

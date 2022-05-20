@@ -608,7 +608,6 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BookingTableAdapter = null;
-            this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.EmployeeTableAdapter = this.employeeTableAdapter;
             this.tableAdapterManager.MovieScheduleTableAdapter = null;
             this.tableAdapterManager.MovieTableAdapter = null;

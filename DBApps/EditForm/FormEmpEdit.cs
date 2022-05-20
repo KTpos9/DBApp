@@ -48,7 +48,7 @@ namespace DBApps.EditForm
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            this.employeeTableAdapter.Delete1(employeeDataGridView.CurrentRow.Cells[0].Value.ToString());
+            this.employeeTableAdapter.Delete(textEmpID.Text, textEmpPass.Text, Convert.ToInt32(textEmpSalary.Text), textEmpPositionID.Text, comboEmpPosition.Text, textEmpName.Text, textEmpSName.Text, textEmpHouseNum.Text, textEmpMoo.Text, textEmpSD.Text, textEmpDistrict.Text, textEmpProvince.Text, Convert.ToInt32(textEmpPostalCode.Text), textMovieID.Text);
             this.employeeTableAdapter.Fill(this.movieDBDataSet.Employee);
         }
 

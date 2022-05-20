@@ -27,19 +27,19 @@ namespace DBApps.EditForm
         }
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            bookingTableAdapter.Insert(textBookingID.Text, textCusID.Text, textMSID.Text, textBookingNum.Text, textMovieName.Text, Convert.ToInt32(textBookingCinemaNo.Text));
+            bookingTableAdapter.Insert(textBookingID.Text, textMSID.Text, textBookingNum.Text, textMovieName.Text, Convert.ToInt32(textBookingCinemaNo.Text));
             this.bookingTableAdapter.Fill(this.movieDBDataSet.Booking);
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            this.bookingTableAdapter.Update1(textCusID.Text, textMSID.Text, textBookingNum.Text, textMovieName.Text, Convert.ToInt32(textBookingCinemaNo.Text), textBookingID.Text);
+            this.bookingTableAdapter.Update1(textMSID.Text, textBookingNum.Text, textMovieName.Text, Convert.ToInt32(textBookingCinemaNo.Text), textBookingID.Text);
             this.bookingTableAdapter.Fill(this.movieDBDataSet.Booking);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            this.bookingTableAdapter.Delete(textBookingID.Text, textCusID.Text, textMSID.Text, textBookingNum.Text, textMovieName.Text, Convert.ToInt32(textBookingCinemaNo.Text));
+            this.bookingTableAdapter.Delete(textBookingID.Text, textMSID.Text, textBookingNum.Text, textMovieName.Text, Convert.ToInt32(textBookingCinemaNo.Text));
             this.bookingTableAdapter.Fill(this.movieDBDataSet.Booking);
         }
 

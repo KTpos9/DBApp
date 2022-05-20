@@ -90,7 +90,6 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BookingTableAdapter = null;
-            this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.EmployeeTableAdapter = null;
             this.tableAdapterManager.MovieScheduleTableAdapter = null;
             this.tableAdapterManager.MovieTableAdapter = null;
@@ -303,7 +302,7 @@
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Location = new System.Drawing.Point(251, 280);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(560, 180);
+            this.groupBox1.Size = new System.Drawing.Size(349, 180);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Coulmns";
