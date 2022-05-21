@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBooking));
             this.movieDBDataSet = new DBApps.MovieDBDataSet();
             this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookingTableAdapter = new DBApps.MovieDBDataSetTableAdapters.BookingTableAdapter();
@@ -48,6 +49,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonExport = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingDataGridView)).BeginInit();
@@ -95,6 +99,7 @@
             this.bookingDataGridView.Location = new System.Drawing.Point(0, 0);
             this.bookingDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bookingDataGridView.Name = "bookingDataGridView";
+            this.bookingDataGridView.RowHeadersWidth = 51;
             this.bookingDataGridView.Size = new System.Drawing.Size(601, 178);
             this.bookingDataGridView.TabIndex = 1;
             // 
@@ -102,31 +107,41 @@
             // 
             this.BookingID.DataPropertyName = "BookingID";
             this.BookingID.HeaderText = "BookingID";
+            this.BookingID.MinimumWidth = 6;
             this.BookingID.Name = "BookingID";
+            this.BookingID.Width = 125;
             // 
             // MSID
             // 
             this.MSID.DataPropertyName = "MSID";
             this.MSID.HeaderText = "MSID";
+            this.MSID.MinimumWidth = 6;
             this.MSID.Name = "MSID";
+            this.MSID.Width = 125;
             // 
             // BookingNum
             // 
             this.BookingNum.DataPropertyName = "BookingNum";
             this.BookingNum.HeaderText = "BookingNum";
+            this.BookingNum.MinimumWidth = 6;
             this.BookingNum.Name = "BookingNum";
+            this.BookingNum.Width = 125;
             // 
             // MovieName
             // 
             this.MovieName.DataPropertyName = "MovieName";
             this.MovieName.HeaderText = "MovieName";
+            this.MovieName.MinimumWidth = 6;
             this.MovieName.Name = "MovieName";
+            this.MovieName.Width = 125;
             // 
             // BookingCinemaNo
             // 
             this.BookingCinemaNo.DataPropertyName = "BookingCinemaNo";
             this.BookingCinemaNo.HeaderText = "BookingCinemaNo";
+            this.BookingCinemaNo.MinimumWidth = 6;
             this.BookingCinemaNo.Name = "BookingCinemaNo";
+            this.BookingCinemaNo.Width = 125;
             // 
             // groupBox1
             // 
@@ -152,7 +167,7 @@
             this.checkBox14.Location = new System.Drawing.Point(17, 28);
             this.checkBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(121, 25);
+            this.checkBox14.Size = new System.Drawing.Size(150, 31);
             this.checkBox14.TabIndex = 17;
             this.checkBox14.Text = "BookingNum";
             this.checkBox14.UseVisualStyleBackColor = true;
@@ -166,7 +181,7 @@
             this.checkBox4.Location = new System.Drawing.Point(177, 57);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(161, 25);
+            this.checkBox4.Size = new System.Drawing.Size(201, 31);
             this.checkBox4.TabIndex = 7;
             this.checkBox4.Text = "BookingCinemaNo";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -179,7 +194,7 @@
             this.checkBox3.Location = new System.Drawing.Point(177, 27);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(114, 25);
+            this.checkBox3.Size = new System.Drawing.Size(141, 31);
             this.checkBox3.TabIndex = 6;
             this.checkBox3.Text = "MovieName";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -192,7 +207,7 @@
             this.checkBox2.Location = new System.Drawing.Point(17, 90);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(121, 25);
+            this.checkBox2.Size = new System.Drawing.Size(150, 31);
             this.checkBox2.TabIndex = 5;
             this.checkBox2.Text = "BookingNum";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -205,7 +220,7 @@
             this.checkBox1.Location = new System.Drawing.Point(17, 59);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(67, 25);
+            this.checkBox1.Size = new System.Drawing.Size(82, 31);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "MSID";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -215,7 +230,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 21);
+            this.label1.Size = new System.Drawing.Size(89, 27);
             this.label1.TabIndex = 8;
             this.label1.Text = "Order By";
             // 
@@ -231,13 +246,13 @@
             this.comboBox1.Location = new System.Drawing.Point(21, 232);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 29);
+            this.comboBox1.Size = new System.Drawing.Size(179, 35);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(21, 279);
+            this.buttonExport.Location = new System.Drawing.Point(21, 272);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(105, 40);
             this.buttonExport.TabIndex = 10;
@@ -245,11 +260,37 @@
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(21, 318);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(105, 41);
+            this.buttonPrint.TabIndex = 11;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // FormBooking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 371);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -291,5 +332,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonExport;
+        private System.Windows.Forms.Button buttonPrint;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

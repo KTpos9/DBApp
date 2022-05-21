@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace DBApps.QueryForm
 {
@@ -36,6 +37,25 @@ namespace DBApps.QueryForm
         private void buttonExport_Click(object sender, EventArgs e)
         {
             Export.ExportToExcel(bookingDataGridView);
+        }
+        
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+
+            e.Graphics.DrawImage(bmp, 0, 0);
+        }
+
+        Bitmap bmp;
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            //Open print preview dialog
+            Graphics g = this.CreateGraphics();
+            bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
+            Graphics mg = Graphics.FromImage(bmp);
+            mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printPreviewDialog1.ShowDialog();
         }
     }
 }
