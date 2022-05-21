@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRevQuery));
             this.movieDBDataSet = new DBApps.MovieDBDataSet();
             this.revenueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.revenueTableAdapter = new DBApps.MovieDBDataSetTableAdapters.RevenueTableAdapter();
@@ -51,6 +52,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelTotal = new System.Windows.Forms.Label();
             this.buttonExport = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.movieDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueDataGridView)).BeginInit();
@@ -173,7 +177,7 @@
             this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.Location = new System.Drawing.Point(196, 111);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(123, 25);
+            this.checkBox5.Size = new System.Drawing.Size(149, 32);
             this.checkBox5.TabIndex = 18;
             this.checkBox5.Text = "RevenuePrice";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -187,7 +191,7 @@
             this.checkBox14.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox14.Location = new System.Drawing.Point(19, 35);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(87, 25);
+            this.checkBox14.Size = new System.Drawing.Size(108, 32);
             this.checkBox14.TabIndex = 17;
             this.checkBox14.Text = "MovieID";
             this.checkBox14.UseVisualStyleBackColor = true;
@@ -200,7 +204,7 @@
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(197, 71);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(121, 25);
+            this.checkBox4.Size = new System.Drawing.Size(148, 32);
             this.checkBox4.TabIndex = 7;
             this.checkBox4.Text = "RevenueDate";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -213,7 +217,7 @@
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(197, 33);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(104, 25);
+            this.checkBox3.Size = new System.Drawing.Size(126, 32);
             this.checkBox3.TabIndex = 6;
             this.checkBox3.Text = "RevenueID";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -226,7 +230,7 @@
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(19, 111);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(121, 25);
+            this.checkBox2.Size = new System.Drawing.Size(148, 32);
             this.checkBox2.TabIndex = 5;
             this.checkBox2.Text = "RevenueType";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -239,7 +243,7 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(19, 73);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 25);
+            this.checkBox1.Size = new System.Drawing.Size(146, 32);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "RevenueUser";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -250,7 +254,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 21);
+            this.label1.Size = new System.Drawing.Size(89, 28);
             this.label1.TabIndex = 8;
             this.label1.Text = "Order By";
             // 
@@ -266,7 +270,7 @@
             "MovieID"});
             this.comboBox1.Location = new System.Drawing.Point(17, 286);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 29);
+            this.comboBox1.Size = new System.Drawing.Size(198, 36);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -275,7 +279,7 @@
             this.labelTotal.AutoSize = true;
             this.labelTotal.Location = new System.Drawing.Point(32, 414);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(52, 21);
+            this.labelTotal.Size = new System.Drawing.Size(65, 28);
             this.labelTotal.TabIndex = 10;
             this.labelTotal.Text = "label2";
             // 
@@ -289,12 +293,38 @@
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(17, 374);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(105, 41);
+            this.buttonPrint.TabIndex = 14;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // FormRevQuery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(823, 460);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.groupBox1);
@@ -340,5 +370,8 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Button buttonExport;
+        private System.Windows.Forms.Button buttonPrint;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
