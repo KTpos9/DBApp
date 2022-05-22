@@ -32,15 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonMovie = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonMS = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonBooking = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -97,19 +100,19 @@
             this.buttonMovie.UseVisualStyleBackColor = false;
             this.buttonMovie.Click += new System.EventHandler(this.buttonMovie_Click);
             // 
-            // button4
+            // buttonMS
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Location = new System.Drawing.Point(29, 309);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(766, 67);
-            this.button4.TabIndex = 0;
-            this.button4.Text = " ข้อมูลการจอง";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonMS.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonMS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMS.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.buttonMS.Location = new System.Drawing.Point(29, 309);
+            this.buttonMS.Name = "buttonMS";
+            this.buttonMS.Size = new System.Drawing.Size(766, 67);
+            this.buttonMS.TabIndex = 0;
+            this.buttonMS.Text = " ข้อมูลรอบฉาย";
+            this.buttonMS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMS.UseVisualStyleBackColor = false;
+            this.buttonMS.Click += new System.EventHandler(this.buttonMS_Click);
             // 
             // pictureBox4
             // 
@@ -161,18 +164,47 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonBooking
+            // 
+            this.buttonBooking.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBooking.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBooking.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.buttonBooking.Location = new System.Drawing.Point(29, 382);
+            this.buttonBooking.Name = "buttonBooking";
+            this.buttonBooking.Size = new System.Drawing.Size(766, 67);
+            this.buttonBooking.TabIndex = 0;
+            this.buttonBooking.Text = " ข้อมูลการจอง";
+            this.buttonBooking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBooking.UseVisualStyleBackColor = false;
+            this.buttonBooking.Click += new System.EventHandler(this.buttonBooking_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Image = global::DBApps.Properties.Resources.ic_fluent_chevron_right_24_filled;
+            this.pictureBox5.InitialImage = null;
+            this.pictureBox5.Location = new System.Drawing.Point(746, 403);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
             // information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(846, 551);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonBooking);
+            this.Controls.Add(this.buttonMS);
             this.Controls.Add(this.buttonMovie);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -185,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +232,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonMovie;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonMS;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button buttonBooking;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

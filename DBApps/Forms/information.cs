@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media;
 namespace DBApps.Forms
 {
     public partial class information : Form
@@ -35,11 +27,16 @@ namespace DBApps.Forms
             form.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonMS_Click(object sender, EventArgs e)
+        {
+            Form form = new QueryForm.FormMSQuery();
+            form.Show();
+        }
+
+        private void buttonBooking_Click(object sender, EventArgs e)
         {
             Form form = new QueryForm.FormBooking();
             form.Show();
-
         }
     }
 }

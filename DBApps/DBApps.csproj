@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
@@ -44,6 +47,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -133,17 +139,29 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrint.cs">
+    <Compile Include="ReportForm\FormBookingReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrint.Designer.cs">
-      <DependentUpon>FormPrint.cs</DependentUpon>
+    <Compile Include="ReportForm\FormBookingReport.Designer.cs">
+      <DependentUpon>FormBookingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\FormEmpReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\FormEmpReport.Designer.cs">
+      <DependentUpon>FormEmpReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormEdit.Designer.cs">
       <DependentUpon>FormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Movie.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
@@ -239,11 +257,35 @@
     <Compile Include="QueryForm\FormMovieQuery.Designer.cs">
       <DependentUpon>FormMovieQuery.cs</DependentUpon>
     </Compile>
+    <Compile Include="QueryForm\FormMSQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryForm\FormMSQuery.Designer.cs">
+      <DependentUpon>FormMSQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="QueryForm\FormRevQuery.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QueryForm\FormRevQuery.Designer.cs">
       <DependentUpon>FormRevQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\FormMovieReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\FormMovieReport.Designer.cs">
+      <DependentUpon>FormMovieReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\FormMSReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\FormMSReport.Designer.cs">
+      <DependentUpon>FormMSReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\FormRevReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\FormRevReport.Designer.cs">
+      <DependentUpon>FormRevReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Revenue.cs">
       <DependentUpon>MovieModel.tt</DependentUpon>
@@ -273,11 +315,17 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrint.resx">
-      <DependentUpon>FormPrint.cs</DependentUpon>
+    <EmbeddedResource Include="ReportForm\FormBookingReport.resx">
+      <DependentUpon>FormBookingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\FormEmpReport.resx">
+      <DependentUpon>FormEmpReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormEdit.resx">
       <DependentUpon>FormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QueryForm\FormBooking.resx">
       <DependentUpon>FormBooking.cs</DependentUpon>
@@ -319,9 +367,26 @@
     <EmbeddedResource Include="QueryForm\FormMovieQuery.resx">
       <DependentUpon>FormMovieQuery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QueryForm\FormMSQuery.resx">
+      <DependentUpon>FormMSQuery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QueryForm\FormRevQuery.resx">
       <DependentUpon>FormRevQuery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\FormMovieReport.resx">
+      <DependentUpon>FormMovieReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\FormMSReport.resx">
+      <DependentUpon>FormMSReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\FormRevReport.resx">
+      <DependentUpon>FormRevReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportBooking.rdlc" />
+    <EmbeddedResource Include="Report\ReportEmployee.rdlc" />
+    <EmbeddedResource Include="Report\ReportMovie.rdlc" />
+    <EmbeddedResource Include="Report\ReportMS.rdlc" />
+    <EmbeddedResource Include="Report\ReportRev.rdlc" />
     <EntityDeploy Include="MovieModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MovieModel.Designer.cs</LastGenOutput>
@@ -456,6 +521,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
