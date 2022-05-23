@@ -19,19 +19,19 @@ namespace DBApps.EditForm
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            this.movieScheduleTableAdapter.Insert(textMSID.Text, TimePicker.Value.TimeOfDay.ToString(),dateTimePicker1.Value.Date,Convert.ToInt32(textAdd.Text),textMovieID.Text);
+            this.movieScheduleTableAdapter.Insert(textMSID.Text, textBoxMSTime.Text,dateTimePicker1.Value.Date,Convert.ToInt32(textAdd.Text),textMovieID.Text);
             this.movieScheduleTableAdapter.Fill(this.movieDBDataSet.MovieSchedule);
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            this.movieScheduleTableAdapter.Update1(TimePicker.Value.TimeOfDay.ToString(), dateTimePicker1.Value.Date, Convert.ToInt32(textAdd.Text), textMovieID.Text,textMSID.Text);
+            this.movieScheduleTableAdapter.Update1(textBoxMSTime.Text, dateTimePicker1.Value.Date, Convert.ToInt32(textAdd.Text), textMovieID.Text,textMSID.Text);
             this.movieScheduleTableAdapter.Fill(this.movieDBDataSet.MovieSchedule);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            this.movieScheduleTableAdapter.Delete(textMSID.Text, TimePicker.Value.TimeOfDay.ToString(), dateTimePicker1.Value.Date, Convert.ToInt32(textAdd.Text), textMovieID.Text);
+            this.movieScheduleTableAdapter.Delete(textMSID.Text, textBoxMSTime.Text, dateTimePicker1.Value.Date, Convert.ToInt32(textAdd.Text), textMovieID.Text);
             this.movieScheduleTableAdapter.Fill(this.movieDBDataSet.MovieSchedule);
         }
 
@@ -49,7 +49,7 @@ namespace DBApps.EditForm
         private void movieScheduleDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textMSID.Text = movieScheduleDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-            TimePicker.Value = (DateTime)movieScheduleDataGridView.Rows[e.RowIndex].Cells[1].Value;
+            textBoxMSTime.Text = movieScheduleDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
             dateTimePicker1.Value = (DateTime)movieScheduleDataGridView.Rows[e.RowIndex].Cells[2].Value;
             textAdd.Text = movieScheduleDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
             textMovieID.Text = movieScheduleDataGridView.Rows[e.RowIndex ].Cells[4].Value.ToString();

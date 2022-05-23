@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media;
 
 
 namespace DBApps
@@ -62,10 +55,6 @@ namespace DBApps
             if((Label)sender == labelSetting)
             {
                 OpenMenuForm(new Forms.FormSettings());
-            }
-            else if((Label)sender == label5)
-            {
-                OpenMenuForm(new Forms.pay());
             }
             else if ((Label)sender == labelhome)
             {

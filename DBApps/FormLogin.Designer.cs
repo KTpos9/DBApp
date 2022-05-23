@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -90,15 +90,17 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // checkBox1
+            // checkBoxDebug
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(114, 104);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(132, 25);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Remember Me";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxDebug.AutoSize = true;
+            this.checkBoxDebug.Checked = true;
+            this.checkBoxDebug.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDebug.Location = new System.Drawing.Point(114, 104);
+            this.checkBoxDebug.Name = "checkBoxDebug";
+            this.checkBoxDebug.Size = new System.Drawing.Size(115, 25);
+            this.checkBoxDebug.TabIndex = 3;
+            this.checkBoxDebug.Text = "DebugMode";
+            this.checkBoxDebug.UseVisualStyleBackColor = true;
             // 
             // FormLogin
             // 
@@ -106,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(351, 191);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxDebug);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.label2);
@@ -130,6 +132,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxDebug;
     }
 }

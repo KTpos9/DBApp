@@ -51,8 +51,8 @@
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.TimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxMSTime = new System.Windows.Forms.TextBox();
             mSIDLabel = new System.Windows.Forms.Label();
             mSDateLabel = new System.Windows.Forms.Label();
             mSAddLabel = new System.Windows.Forms.Label();
@@ -243,16 +243,6 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // TimePicker
-            // 
-            this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.TimePicker.Location = new System.Drawing.Point(92, 273);
-            this.TimePicker.Name = "TimePicker";
-            this.TimePicker.ShowUpDown = true;
-            this.TimePicker.Size = new System.Drawing.Size(146, 29);
-            this.TimePicker.TabIndex = 47;
-            this.TimePicker.Value = new System.DateTime(2022, 5, 19, 22, 29, 34, 0);
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -261,13 +251,19 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(145, 29);
             this.dateTimePicker1.TabIndex = 48;
             // 
+            // textBoxMSTime
+            // 
+            this.textBoxMSTime.Location = new System.Drawing.Point(93, 270);
+            this.textBoxMSTime.Name = "textBoxMSTime";
+            this.textBoxMSTime.Size = new System.Drawing.Size(145, 29);
+            this.textBoxMSTime.TabIndex = 10;
+            // 
             // FormMSEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 427);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.TimePicker);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonInsert);
@@ -275,6 +271,7 @@
             this.Controls.Add(this.movieScheduleDataGridView);
             this.Controls.Add(this.textMovieID);
             this.Controls.Add(this.textAdd);
+            this.Controls.Add(this.textBoxMSTime);
             this.Controls.Add(this.textMSID);
             this.Controls.Add(mSIDLabel);
             this.Controls.Add(mSTimeLabel);
@@ -312,7 +309,7 @@
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.DateTimePicker TimePicker;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBoxMSTime;
     }
 }
