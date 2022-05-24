@@ -5734,8 +5734,8 @@ SELECT MovieID, MoviePrice, MovieName, MovieCategory, MovieDate FROM Movie WHERE
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "UPDATE       Movie\r\nSET                MoviePrice = @MoviePrice, MovieName = @Mov" +
-                "ieName, MovieCategory = @MovieCategory, MovieDate = @MovieDate, MovieID =\r\nWHERE" +
-                "        (MovieID = @MovieID);  ";
+                "ieName, MovieCategory = @MovieCategory, MovieDate = @MovieDate\r\nWHERE        (Mo" +
+                "vieID = @MovieID);   ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MoviePrice", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MoviePrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MovieName", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "MovieName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7289,7 +7289,7 @@ SELECT RevenueID, RevenueDate, RevenueUser, RevenueType, RevenuePrice, MovieID F
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "UPDATE       Revenue\r\nSET                RevenueDate = @RevenueDate, RevenueUser " +
                 "= @RevenueUser, RevenueType = @RevenueType, RevenuePrice = @RevenuePrice, MovieI" +
-                "D = @MovieID, RevenueID =\r\nWHERE        (RevenueID = @RevenueID)";
+                "D = @MovieID\r\nWHERE        (RevenueID = @RevenueID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RevenueDate", global::System.Data.SqlDbType.DateTime2, 6, global::System.Data.ParameterDirection.Input, 0, 0, "RevenueDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RevenueUser", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "RevenueUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
